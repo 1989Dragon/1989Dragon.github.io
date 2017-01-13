@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>沧海拾珠</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2017-01-11T14:41:16.017Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>芥龙</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2016年读书学习小结</title>
+    <link href="http://yoursite.com/2017/01/11/2016%E5%B9%B4%E8%AF%BB%E4%B9%A6%E5%AD%A6%E4%B9%A0%E5%B0%8F%E7%BB%93/"/>
+    <id>http://yoursite.com/2017/01/11/2016年读书学习小结/</id>
+    <published>2017-01-11T13:18:14.000Z</published>
+    <updated>2017-01-11T14:41:16.017Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;2016年已经过去了，和许多人一样，我也在这个时刻开始思考过去的这一年我收获了什么，除开工作，自己的业余时间又利用在了哪些方面，从中我又学到了什么有价值的东西。&lt;/p&gt;
+&lt;h2 id=&quot;1-阅读&quot;&gt;&lt;a href=&quot;#1-阅读&quot; class=&quot;headerlink&quot; title=&quot;1. 阅读&quot;&gt;&lt;/a&gt;1. 阅读&lt;/h2&gt;&lt;p&gt;今年开始使用kindle看书，同时也看纸质版书籍。用kindle的初衷是外出携带方便，然后可以看英语原著，主要还是小说。名单如下：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;《A Walk to Remember》&lt;/strong&gt; Nicolas Sparks&lt;br&gt; 这本属于青春言情小说，描写的是富家公子哥恋上朴素善良的女生的故事，女主后来因病去世，故事还是很感人的。里面有句话写的很好，”Love is like the wind, you can’t see it, but you can feel it.” 爱就像风一样，看不到，却能感觉到。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;《The Faults in Our Stars》&lt;/strong&gt; Nicolas Sparks 还是青春言情小说，男女主人公都患有重疾，也因此而得以认识相爱，最后男主不幸去世。&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2017/01/08/hello-world/"/>
+    <id>http://yoursite.com/2017/01/08/hello-world/</id>
+    <published>2017-01-08T12:41:24.935Z</published>
+    <updated>2017-01-08T12:41:24.935Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>

@@ -94,7 +94,7 @@
 <meta property="og:image" content="http://ok4fr796i.bkt.clouddn.com/20170222_2.png">
 <meta property="og:image" content="http://ok4fr796i.bkt.clouddn.com/20170222_3.png">
 <meta property="og:image" content="http://ok4fr796i.bkt.clouddn.com/20170222_4.png">
-<meta property="og:updated_time" content="2017-02-22T13:46:11.100Z">
+<meta property="og:updated_time" content="2017-02-22T14:07:14.164Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="生物序列比对算法 Smith-Waterman 简介">
 <meta name="twitter:description" content="最近几天都在学习一个生物学算法，就是名垂史册的Smith-Waterman 算法。早在1970年，Saul B. Needleman和 Christian D. Wunsch 两位科学家发明了Needleman-Wunsch 算法，旨在解决生物学上DNA和蛋白质序列比对相似度相关的问题。">
@@ -372,7 +372,7 @@
       
 
       
-        <p>最近几天都在学习一个生物学算法，就是名垂史册的Smith-Waterman 算法。早在1970年，Saul B. Needleman和 Christian D. Wunsch 两位科学家发明了Needleman-Wunsch 算法，旨在解决生物学上DNA和蛋白质序列比对相似度相关的问题。<a id="more"></a>之后由Temple F. Smith 和 Michael S. Waterman进一步改进，于1981年提出了Smith-Waterman 算法。相比于前者，算法中仅仅多了一个0，但为此就花了十年时间，真是令人感概。Needleman-Wunsch算法侧重于全局序列比对，而Smith-Waterman算法侧重于局部比对。两种算法最初都以打分矩阵为模型来实现短序列的比对的，之后通过动态编程来对长序列进行比对。<br><img src="http://ok4fr796i.bkt.clouddn.com/20170222_1.png" alt="两种算法"><br><img src="http://ok4fr796i.bkt.clouddn.com/20170222_2.png" alt="示例"><br>S(xi, yj)是碱基相似度得分，相同则为正数，不同则为负数。d是空位罚分，为负数。公式看起来非常简单，然而需要注意的是，在计算每一个位点的得分时，需要考虑四个值，F(i-1,j-1)+S(xi+yj), F(i-1,j)+d, F(i,j-1)+d和0。它们之中最大的值才能作为F(i,j)这个位点的值。图中F(G,G)的值就由其斜对角，上面，左边三者得来，取最大值，如果小于0，则用0代替。最后就得到一个得分矩阵。之后是回溯过程，目的是为找到最佳的局部比对结果。从得分最高的位点开始，在其斜对角，上面和左边三者找出之前使其得分最大的那个位点。以此类推，直到位点分数为0的地方停止，这样将得到局部最优的相似序列。需要注意的是数直方向出现连续，则x轴上的序列要引入空位（-），水平方向出现连续，则y轴上的序列要引入空位（-）。此外，要得到局部次优的序列，则从最优序列停止的外围重新开始新一轮的序列回溯。<br><img src="http://ok4fr796i.bkt.clouddn.com/20170222_3.png" alt=""><br><img src="http://ok4fr796i.bkt.clouddn.com/20170222_4.png" alt=""></p>
+        <p>最近几天都在学习一个生物学算法，就是名垂史册的Smith-Waterman 算法。早在1970年，Saul B. Needleman和 Christian D. Wunsch 两位科学家发明了Needleman-Wunsch 算法，旨在解决生物学上DNA和蛋白质序列比对相似度相关的问题。<a id="more"></a>之后由Temple F. Smith 和 Michael S. Waterman进一步改进，于1981年提出了Smith-Waterman 算法。相比于前者，算法中仅仅多了一个0，但为此就花了十年时间，真是令人感概。Needleman-Wunsch算法侧重于全局序列比对，而Smith-Waterman算法侧重于局部比对。两种算法最初都以打分矩阵为模型来实现短序列的比对的，之后通过动态编程来对长序列进行比对。<br><img src="http://ok4fr796i.bkt.clouddn.com/20170222_1.png" alt="两种算法"><br><img src="http://ok4fr796i.bkt.clouddn.com/20170222_2.png" alt="示例"><br>S(xi, yj)是碱基相似度得分，相同则为正数，不同则为负数。d是空位罚分，为负数。公式看起来非常简单，然而需要注意的是，在计算每一个位点的得分时，需要考虑四个值，F(i-1,j-1)+S(xi+yj), F(i-1,j)+d, F(i,j-1)+d和0。它们之中最大的值才能作为F(i,j)这个位点的值。图中F(G,G)的值就由其斜对角，上面，左边三者得来，取最大值，如果小于0，则用0代替。最后就得到一个得分矩阵。之后是回溯过程，目的是为找到最佳的局部比对结果。从得分最高的位点开始，在其斜对角，上面和左边三者找出之前使其得分最大的那个位点。以此类推，直到位点分数为0的地方停止，这样将得到局部最优的相似序列。需要注意的是数直方向出现连续，则x轴上的序列要引入空位（-），水平方向出现连续，则y轴上的序列要引入空位（-）。此外，要得到局部次优的序列，则从最优序列停止的外围重新开始新一轮的序列回溯。<br><img src="http://ok4fr796i.bkt.clouddn.com/20170222_3.png" alt=""><br><img src="http://ok4fr796i.bkt.clouddn.com/20170222_4.png" alt=""><br>注：图片来自Wiki百科</p>
 
       
     </div>
@@ -414,6 +414,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/03/31/Pandas 数据输入及验证/" rel="prev" title="Pandas Data Input and Validation">
+                Pandas Data Input and Validation <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -501,7 +505,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -519,7 +523,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -578,8 +582,8 @@
       <div class="footer-inner">
         <div class="copyright" >
   
-  &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  &copy;  2017 - 
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

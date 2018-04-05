@@ -84,19 +84,16 @@
 
 
 
-<meta name="description" content="1.引入pandas 模块及读取CSV文件12import pandas as pddf = pd.read_csv(&amp;quot;olympics.csv&amp;quot;)
-如果CSV文件前几行是文件说明，真正有用的数据从后面几行开始，那么则读取文件时则需要跳过这几行区域。1df = pd.read_csv(&amp;apos;olympics.csv&amp;apos;, skiprows = 4) #跳过4行">
+<meta name="description" content="1. 设置dataFrame的索引, set_index(keys, inplace = False/True)，keys要设置为索引的列，inplace一般默认为False,表示不修改dataFrame，如果为True，则修改dataFrame.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Pandas 数据输入及验证">
-<meta property="og:url" content="http://yoursite.com/2018/03/31/Pandas 数据输入及验证/index.html">
+<meta property="og:title" content="Pandas 中的索引设置及查找">
+<meta property="og:url" content="http://yoursite.com/2018/04/05/Pandas-中索引设置及查找/index.html">
 <meta property="og:site_name" content="沧海拾珠">
-<meta property="og:description" content="1.引入pandas 模块及读取CSV文件12import pandas as pddf = pd.read_csv(&amp;quot;olympics.csv&amp;quot;)
-如果CSV文件前几行是文件说明，真正有用的数据从后面几行开始，那么则读取文件时则需要跳过这几行区域。1df = pd.read_csv(&amp;apos;olympics.csv&amp;apos;, skiprows = 4) #跳过4行">
-<meta property="og:updated_time" content="2018-03-31T14:55:06.052Z">
+<meta property="og:description" content="1. 设置dataFrame的索引, set_index(keys, inplace = False/True)，keys要设置为索引的列，inplace一般默认为False,表示不修改dataFrame，如果为True，则修改dataFrame.">
+<meta property="og:updated_time" content="2018-04-05T13:24:31.315Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Pandas 数据输入及验证">
-<meta name="twitter:description" content="1.引入pandas 模块及读取CSV文件12import pandas as pddf = pd.read_csv(&amp;quot;olympics.csv&amp;quot;)
-如果CSV文件前几行是文件说明，真正有用的数据从后面几行开始，那么则读取文件时则需要跳过这几行区域。1df = pd.read_csv(&amp;apos;olympics.csv&amp;apos;, skiprows = 4) #跳过4行">
+<meta name="twitter:title" content="Pandas 中的索引设置及查找">
+<meta name="twitter:description" content="1. 设置dataFrame的索引, set_index(keys, inplace = False/True)，keys要设置为索引的列，inplace一般默认为False,表示不修改dataFrame，如果为True，则修改dataFrame.">
 
 
 
@@ -124,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/03/31/Pandas 数据输入及验证/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/05/Pandas-中索引设置及查找/"/>
 
 
 
 
 
-  <title> Pandas 数据输入及验证 | 沧海拾珠 </title>
+  <title> Pandas 中的索引设置及查找 | 沧海拾珠 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -263,7 +260,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/31/Pandas 数据输入及验证/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/05/Pandas-中索引设置及查找/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="芥龙">
@@ -287,7 +284,7 @@
             
             
               
-                Pandas 数据输入及验证
+                Pandas 中的索引设置及查找
               
             
           </h1>
@@ -302,8 +299,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-31T21:36:08+08:00">
-                2018-03-31
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-05T20:00:19+08:00">
+                2018-04-05
               </time>
             
 
@@ -343,8 +340,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/03/31/Pandas 数据输入及验证/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/03/31/Pandas 数据输入及验证/" itemprop="commentCount"></span>
+                <a href="/2018/04/05/Pandas-中索引设置及查找/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/04/05/Pandas-中索引设置及查找/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -370,13 +367,12 @@
       
 
       
-        <h2 id="1-引入pandas-模块及读取CSV文件"><a href="#1-引入pandas-模块及读取CSV文件" class="headerlink" title="1.引入pandas 模块及读取CSV文件"></a>1.引入pandas 模块及读取CSV文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">import pandas as pd</div><div class="line">df = pd.read_csv(&quot;olympics.csv&quot;)</div></pre></td></tr></table></figure>
-<p>如果CSV文件前几行是文件说明，真正有用的数据从后面几行开始，那么则读取文件时则需要跳过这几行区域。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">df = pd.read_csv(&apos;olympics.csv&apos;, skiprows = 4) #跳过4行</div></pre></td></tr></table></figure></p>
+        <h2 id="1-设置dataFrame的索引-set-index-keys-inplace-False-True-，keys要设置为索引的列，inplace一般默认为False"><a href="#1-设置dataFrame的索引-set-index-keys-inplace-False-True-，keys要设置为索引的列，inplace一般默认为False" class="headerlink" title="1. 设置dataFrame的索引, set_index(keys, inplace = False/True)，keys要设置为索引的列，inplace一般默认为False,"></a>1. 设置dataFrame的索引, set_index(keys, inplace = False/True)，keys要设置为索引的列，inplace一般默认为False,</h2><p>表示不修改dataFrame，如果为True，则修改dataFrame.</p>
 <a id="more"></a>
-<p>想要查看文件的类型可以使用type 函数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">type(df)</div><div class="line">pandas.core.frame.DataFrame</div><div class="line">type(df[&apos;City&apos;])</div><div class="line">pandas.core.series.Series</div></pre></td></tr></table></figure></p>
-<h2 id="2-查看数据集前面或者后面5行"><a href="#2-查看数据集前面或者后面5行" class="headerlink" title="2. 查看数据集前面或者后面5行"></a>2. 查看数据集前面或者后面5行</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">df.head()</div><div class="line">df.tail()</div></pre></td></tr></table></figure>
-<h2 id="3-查看数据集的维度及具体信息"><a href="#3-查看数据集的维度及具体信息" class="headerlink" title="3. 查看数据集的维度及具体信息"></a>3. 查看数据集的维度及具体信息</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">df.shape</div><div class="line">(29216, 10) # 29216 行，10 列</div><div class="line">df.info() #返回行列信息以及有无missing data</div></pre></td></tr></table></figure>
-<h2 id="4-获取单独的列信息"><a href="#4-获取单独的列信息" class="headerlink" title="4. 获取单独的列信息"></a>4. 获取单独的列信息</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">df[&apos;City&apos;]</div><div class="line">df[[&apos;City&apos;,&apos;Athlete&apos;]]</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">data:   </div><div class="line">     a    b  c    d  </div><div class="line">0  bar  one  z  1.0  </div><div class="line">1  bar  two  y  2.0  </div><div class="line">2  foo  one  x  3.0  </div><div class="line">3  foo  two  w  4.0  </div><div class="line"></div><div class="line">data.set_index(&apos;b&apos;, inplace = True)</div><div class="line">data:</div><div class="line"></div><div class="line">b    a    c    d  </div><div class="line">one  bar  z  1.0  </div><div class="line">two  bar  y  2.0  </div><div class="line">one  foo  x  3.0  </div><div class="line">two  foo  w  4.0</div></pre></td></tr></table></figure>
+<h2 id="2-重置索引，reset-index-inplace-False-True-。重置索引之后，产生新的index，原先的index会变为列。"><a href="#2-重置索引，reset-index-inplace-False-True-。重置索引之后，产生新的index，原先的index会变为列。" class="headerlink" title="2. 重置索引，reset_index(inplace= False/True)。重置索引之后，产生新的index，原先的index会变为列。"></a>2. 重置索引，reset_index(inplace= False/True)。重置索引之后，产生新的index，原先的index会变为列。</h2><p>inplace 为True 表示在dataFrame本身进行修改。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; df = pd.DataFrame([(&apos;bird&apos;,    389.0),</div><div class="line">...                    (&apos;bird&apos;,     24.0),</div><div class="line">...                    (&apos;mammal&apos;,   80.5),</div><div class="line">...                    (&apos;mammal&apos;, np.nan)],</div><div class="line">...                   index=[&apos;falcon&apos;, &apos;parrot&apos;, &apos;lion&apos;, &apos;monkey&apos;],</div><div class="line">...                   columns=(&apos;class&apos;, &apos;max_speed&apos;))</div><div class="line">&gt;&gt;&gt; df.reset_index()</div><div class="line">    index   class  max_speed</div><div class="line">0  falcon    bird      389.0</div><div class="line">1  parrot    bird       24.0</div><div class="line">2    lion  mammal       80.5</div><div class="line">3  monkey  mammal        NaN</div></pre></td></tr></table></figure></p>
+<h2 id="3-对索引进行排序，df-sort-index-inplace-False-True-ascending-False-True"><a href="#3-对索引进行排序，df-sort-index-inplace-False-True-ascending-False-True" class="headerlink" title="3.对索引进行排序，df.sort_index(inplace = False/True, ascending = False/True)"></a>3.对索引进行排序，df.sort_index(inplace = False/True, ascending = False/True)</h2><h2 id="4-对索引信息进行查找，loc和iloc的使用。"><a href="#4-对索引信息进行查找，loc和iloc的使用。" class="headerlink" title="4.对索引信息进行查找，loc和iloc的使用。"></a>4.对索引信息进行查找，loc和iloc的使用。</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">import pandas as pd</div><div class="line">df = pd.DataFrame([[&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;],[&apos;x&apos;,&apos;y&apos;,&apos;z&apos;,&apos;q&apos;],[&apos;e&apos;,&apos;f&apos;,&apos;g&apos;,&apos;h&apos;]],</div><div class="line">                  columns = [&apos;A&apos;,&apos;B&apos;,&apos;C&apos;,&apos;D&apos;],</div><div class="line">                  index = [&apos;one&apos;,&apos;two&apos;,&apos;three&apos;])</div><div class="line">df.loc[:,[&apos;A&apos;,&apos;C&apos;]] #获取A，C两列信息。</div><div class="line">df.iloc[:,[0,2]] #同样获取A，C两列信息。</div><div class="line"></div><div class="line">	   A	C</div><div class="line">one	   a	c</div><div class="line">two	   x	z</div><div class="line">three	e	g</div><div class="line"></div><div class="line">df.loc[:,&apos;A&apos;:&apos;C&apos;] # 获取A列到C列之间的列，df.iloc[:,0:3]也能得到同样的结果。</div><div class="line">	    A   B	C</div><div class="line">one	    a   b	c</div><div class="line">two	    x   y	z</div><div class="line">three	e	f	g</div></pre></td></tr></table></figure>
+<p>如果你想要选取某一行的数据，可以使用df.loc[[i]]或者df.iloc[[i]]。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">df.loc[[&apos;one&apos;]]</div><div class="line">df.iloc[[i]]</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -409,8 +405,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/12/生物序列比对算法-Smith-Waterman-简介/" rel="next" title="生物序列比对算法 Smith-Waterman 简介">
-                <i class="fa fa-chevron-left"></i> 生物序列比对算法 Smith-Waterman 简介
+              <a href="/2018/04/03/Pandas-基本绘图/" rel="next" title="Pandas 基本绘图">
+                <i class="fa fa-chevron-left"></i> Pandas 基本绘图
               </a>
             
           </div>
@@ -418,10 +414,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/01/Pandas-基本数据处理/" rel="prev" title="Pandas 基本数据处理">
-                Pandas 基本数据处理 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -470,8 +462,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2018/03/31/Pandas 数据输入及验证/"
-           data-title="Pandas 数据输入及验证" data-url="http://yoursite.com/2018/03/31/Pandas 数据输入及验证/">
+      <div class="ds-thread" data-thread-key="2018/04/05/Pandas-中索引设置及查找/"
+           data-title="Pandas 中的索引设置及查找" data-url="http://yoursite.com/2018/04/05/Pandas-中索引设置及查找/">
       </div>
     
   </div>
@@ -591,7 +583,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-引入pandas-模块及读取CSV文件"><span class="nav-number">1.</span> <span class="nav-text">1.引入pandas 模块及读取CSV文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-查看数据集前面或者后面5行"><span class="nav-number">2.</span> <span class="nav-text">2. 查看数据集前面或者后面5行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-查看数据集的维度及具体信息"><span class="nav-number">3.</span> <span class="nav-text">3. 查看数据集的维度及具体信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-获取单独的列信息"><span class="nav-number">4.</span> <span class="nav-text">4. 获取单独的列信息</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-设置dataFrame的索引-set-index-keys-inplace-False-True-，keys要设置为索引的列，inplace一般默认为False"><span class="nav-number">1.</span> <span class="nav-text">1. 设置dataFrame的索引, set_index(keys, inplace = False/True)，keys要设置为索引的列，inplace一般默认为False,</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-重置索引，reset-index-inplace-False-True-。重置索引之后，产生新的index，原先的index会变为列。"><span class="nav-number">2.</span> <span class="nav-text">2. 重置索引，reset_index(inplace= False/True)。重置索引之后，产生新的index，原先的index会变为列。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-对索引进行排序，df-sort-index-inplace-False-True-ascending-False-True"><span class="nav-number">3.</span> <span class="nav-text">3.对索引进行排序，df.sort_index(inplace = False/True, ascending = False/True)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-对索引信息进行查找，loc和iloc的使用。"><span class="nav-number">4.</span> <span class="nav-text">4.对索引信息进行查找，loc和iloc的使用。</span></a></li></ol></div>
             
 
           </div>

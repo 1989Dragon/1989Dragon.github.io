@@ -90,7 +90,7 @@
 <meta property="og:url" content="http://yoursite.com/2018/04/03/Pandas-基本绘图/index.html">
 <meta property="og:site_name" content="沧海拾珠">
 <meta property="og:description" content="1. 图的类型。主要有3种，线状图，直方图，饼图。1234DataFrame.plot(kind = &amp;apos;line&amp;apos;)DataFrame.plot(kind = &amp;apos;bar&amp;apos;)DataFrame.plot(kind = &amp;apos;barh&amp;apos;)DataFrame.plot(kind = &amp;apos;pie&amp;apos;)">
-<meta property="og:updated_time" content="2018-04-03T13:22:10.812Z">
+<meta property="og:updated_time" content="2018-04-03T13:24:57.906Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Pandas 基本绘图">
 <meta name="twitter:description" content="1. 图的类型。主要有3种，线状图，直方图，饼图。1234DataFrame.plot(kind = &amp;apos;line&amp;apos;)DataFrame.plot(kind = &amp;apos;bar&amp;apos;)DataFrame.plot(kind = &amp;apos;barh&amp;apos;)DataFrame.plot(kind = &amp;apos;pie&amp;apos;)">
@@ -369,7 +369,7 @@
       
         <h2 id="1-图的类型。主要有3种，线状图，直方图，饼图。"><a href="#1-图的类型。主要有3种，线状图，直方图，饼图。" class="headerlink" title="1. 图的类型。主要有3种，线状图，直方图，饼图。"></a>1. 图的类型。主要有3种，线状图，直方图，饼图。</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">DataFrame.plot(kind = &apos;line&apos;)</div><div class="line">DataFrame.plot(kind = &apos;bar&apos;)</div><div class="line">DataFrame.plot(kind = &apos;barh&apos;)</div><div class="line">DataFrame.plot(kind = &apos;pie&apos;)</div></pre></td></tr></table></figure>
 <a id="more"></a>
-<h2 id="2-图的颜色和尺寸"><a href="#2-图的颜色和尺寸" class="headerlink" title="2. 图的颜色和尺寸"></a>2. 图的颜色和尺寸</h2><p>可以使用color定义单一颜色，如果想要颜色更加丰富多彩，可以使用colormap。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">DataFrame.plot(color = &apos;red&apos;, figsize = (10,3))</div><div class="line">DataFrame.plot(colormap = &apos;rainbow&apos;, figsize = (10,3))</div></pre></td></tr></table></figure></p>
+<h2 id="2-图的颜色和尺寸。"><a href="#2-图的颜色和尺寸。" class="headerlink" title="2. 图的颜色和尺寸。"></a>2. 图的颜色和尺寸。</h2><p>可以使用color定义单一颜色，如果想要颜色更加丰富多彩，可以使用colormap。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">DataFrame.plot(color = &apos;red&apos;, figsize = (10,3))</div><div class="line">DataFrame.plot(colormap = &apos;rainbow&apos;, figsize = (10,3))</div></pre></td></tr></table></figure></p>
 <h2 id="3-使用seaborn画图。Seaborn是基于matplotlib的一个可视化工具库，画的图更加的精美。需要单独安装。"><a href="#3-使用seaborn画图。Seaborn是基于matplotlib的一个可视化工具库，画的图更加的精美。需要单独安装。" class="headerlink" title="3. 使用seaborn画图。Seaborn是基于matplotlib的一个可视化工具库，画的图更加的精美。需要单独安装。"></a>3. 使用seaborn画图。Seaborn是基于matplotlib的一个可视化工具库，画的图更加的精美。需要单独安装。</h2><p>$pip install seaborn<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">import seaborn as sns </div><div class="line">df = pd.read_csv(&apos;olympics.csv&apos;,skiprows = 4)</div><div class="line">new_df = df[df.Edition == 1896]</div><div class="line">sns.countplot(x = &apos;Medal&apos;, data = new_df, hue = &apos;Gender&apos;)</div></pre></td></tr></table></figure></p>
 
       
@@ -412,6 +412,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/04/05/Pandas-中索引设置及查找/" rel="prev" title="Pandas 中的索引设置及查找">
+                Pandas 中的索引设置及查找 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -508,7 +512,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -581,7 +585,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-图的类型。主要有3种，线状图，直方图，饼图。"><span class="nav-number">1.</span> <span class="nav-text">1. 图的类型。主要有3种，线状图，直方图，饼图。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-图的颜色和尺寸"><span class="nav-number">2.</span> <span class="nav-text">2. 图的颜色和尺寸</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-使用seaborn画图。Seaborn是基于matplotlib的一个可视化工具库，画的图更加的精美。需要单独安装。"><span class="nav-number">3.</span> <span class="nav-text">3. 使用seaborn画图。Seaborn是基于matplotlib的一个可视化工具库，画的图更加的精美。需要单独安装。</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-图的类型。主要有3种，线状图，直方图，饼图。"><span class="nav-number">1.</span> <span class="nav-text">1. 图的类型。主要有3种，线状图，直方图，饼图。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-图的颜色和尺寸。"><span class="nav-number">2.</span> <span class="nav-text">2. 图的颜色和尺寸。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-使用seaborn画图。Seaborn是基于matplotlib的一个可视化工具库，画的图更加的精美。需要单独安装。"><span class="nav-number">3.</span> <span class="nav-text">3. 使用seaborn画图。Seaborn是基于matplotlib的一个可视化工具库，画的图更加的精美。需要单独安装。</span></a></li></ol></div>
             
 
           </div>

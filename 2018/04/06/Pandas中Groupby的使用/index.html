@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Pandas," />
 
 
 
@@ -84,16 +84,16 @@
 
 
 
-<meta name="description" content="1. 图的类型。主要有3种，线状图，直方图，饼图。1234DataFrame.plot(kind = &amp;apos;line&amp;apos;)DataFrame.plot(kind = &amp;apos;bar&amp;apos;)DataFrame.plot(kind = &amp;apos;barh&amp;apos;)DataFrame.plot(kind = &amp;apos;pie&amp;apos;)">
+<meta name="description" content="1. Groupby用于数据分组123456789101112131415161718192021222324252627import pandas as pdimport numpy as npdf = pd.DataFrame([(&amp;apos;bird&amp;apos;,    389.0),(&amp;apos;bird&amp;apos;,     24.0),(&amp;apos;mammal&amp;apos;,   80">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Pandas 基本绘图">
-<meta property="og:url" content="http://yoursite.com/2018/04/03/Pandas-基本绘图/index.html">
+<meta property="og:title" content="Pandas中Groupby的使用">
+<meta property="og:url" content="http://yoursite.com/2018/04/06/Pandas中Groupby的使用/index.html">
 <meta property="og:site_name" content="沧海拾珠">
-<meta property="og:description" content="1. 图的类型。主要有3种，线状图，直方图，饼图。1234DataFrame.plot(kind = &amp;apos;line&amp;apos;)DataFrame.plot(kind = &amp;apos;bar&amp;apos;)DataFrame.plot(kind = &amp;apos;barh&amp;apos;)DataFrame.plot(kind = &amp;apos;pie&amp;apos;)">
-<meta property="og:updated_time" content="2018-04-03T13:24:57.906Z">
+<meta property="og:description" content="1. Groupby用于数据分组123456789101112131415161718192021222324252627import pandas as pdimport numpy as npdf = pd.DataFrame([(&amp;apos;bird&amp;apos;,    389.0),(&amp;apos;bird&amp;apos;,     24.0),(&amp;apos;mammal&amp;apos;,   80">
+<meta property="og:updated_time" content="2018-04-06T08:54:35.540Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Pandas 基本绘图">
-<meta name="twitter:description" content="1. 图的类型。主要有3种，线状图，直方图，饼图。1234DataFrame.plot(kind = &amp;apos;line&amp;apos;)DataFrame.plot(kind = &amp;apos;bar&amp;apos;)DataFrame.plot(kind = &amp;apos;barh&amp;apos;)DataFrame.plot(kind = &amp;apos;pie&amp;apos;)">
+<meta name="twitter:title" content="Pandas中Groupby的使用">
+<meta name="twitter:description" content="1. Groupby用于数据分组123456789101112131415161718192021222324252627import pandas as pdimport numpy as npdf = pd.DataFrame([(&amp;apos;bird&amp;apos;,    389.0),(&amp;apos;bird&amp;apos;,     24.0),(&amp;apos;mammal&amp;apos;,   80">
 
 
 
@@ -121,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/04/03/Pandas-基本绘图/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/06/Pandas中Groupby的使用/"/>
 
 
 
 
 
-  <title> Pandas 基本绘图 | 沧海拾珠 </title>
+  <title> Pandas中Groupby的使用 | 沧海拾珠 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -260,7 +260,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/03/Pandas-基本绘图/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/06/Pandas中Groupby的使用/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="芥龙">
@@ -284,7 +284,7 @@
             
             
               
-                Pandas 基本绘图
+                Pandas中Groupby的使用
               
             
           </h1>
@@ -299,8 +299,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-03T20:44:54+08:00">
-                2018-04-03
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-06T15:21:59+08:00">
+                2018-04-06
               </time>
             
 
@@ -310,6 +310,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/学习/" itemprop="url" rel="index">
+                    <span itemprop="name">学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -318,8 +340,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/04/03/Pandas-基本绘图/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/04/03/Pandas-基本绘图/" itemprop="commentCount"></span>
+                <a href="/2018/04/06/Pandas中Groupby的使用/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/04/06/Pandas中Groupby的使用/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -345,10 +367,17 @@
       
 
       
-        <h2 id="1-图的类型。主要有3种，线状图，直方图，饼图。"><a href="#1-图的类型。主要有3种，线状图，直方图，饼图。" class="headerlink" title="1. 图的类型。主要有3种，线状图，直方图，饼图。"></a>1. 图的类型。主要有3种，线状图，直方图，饼图。</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">DataFrame.plot(kind = &apos;line&apos;)</div><div class="line">DataFrame.plot(kind = &apos;bar&apos;)</div><div class="line">DataFrame.plot(kind = &apos;barh&apos;)</div><div class="line">DataFrame.plot(kind = &apos;pie&apos;)</div></pre></td></tr></table></figure>
-<a id="more"></a>
-<h2 id="2-图的颜色和尺寸。"><a href="#2-图的颜色和尺寸。" class="headerlink" title="2. 图的颜色和尺寸。"></a>2. 图的颜色和尺寸。</h2><p>可以使用color定义单一颜色，如果想要颜色更加丰富多彩，可以使用colormap。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">DataFrame.plot(color = &apos;red&apos;, figsize = (10,3))</div><div class="line">DataFrame.plot(colormap = &apos;rainbow&apos;, figsize = (10,3))</div></pre></td></tr></table></figure></p>
-<h2 id="3-使用seaborn画图。Seaborn是基于matplotlib的一个可视化工具库，画的图更加的精美。需要单独安装。"><a href="#3-使用seaborn画图。Seaborn是基于matplotlib的一个可视化工具库，画的图更加的精美。需要单独安装。" class="headerlink" title="3. 使用seaborn画图。Seaborn是基于matplotlib的一个可视化工具库，画的图更加的精美。需要单独安装。"></a>3. 使用seaborn画图。Seaborn是基于matplotlib的一个可视化工具库，画的图更加的精美。需要单独安装。</h2><p>$pip install seaborn<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">import seaborn as sns </div><div class="line">df = pd.read_csv(&apos;olympics.csv&apos;,skiprows = 4)</div><div class="line">new_df = df[df.Edition == 1896]</div><div class="line">sns.countplot(x = &apos;Medal&apos;, data = new_df, hue = &apos;Gender&apos;)</div></pre></td></tr></table></figure></p>
+        <h2 id="1-Groupby用于数据分组"><a href="#1-Groupby用于数据分组" class="headerlink" title="1. Groupby用于数据分组"></a>1. Groupby用于数据分组</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">import pandas as pd</div><div class="line">import numpy as np</div><div class="line">df = pd.DataFrame([(&apos;bird&apos;,    389.0),(&apos;bird&apos;,     24.0),(&apos;mammal&apos;,   80.5),(&apos;mammal&apos;, np.nan)],</div><div class="line">                      index=[&apos;falcon&apos;, &apos;parrot&apos;, &apos;lion&apos;, &apos;monkey&apos;],</div><div class="line">                      columns=(&apos;class&apos;, &apos;max_speed&apos;))</div><div class="line"></div><div class="line">	class	max_speed</div><div class="line">falcon	bird	389.0</div><div class="line">parrot	bird	24.0</div><div class="line">lion	mammal	80.5</div><div class="line">monkey	mammal	NaN  </div><div class="line"></div><div class="line"># 对class进行分组并打印出来</div><div class="line">new_df = df.groupby([&apos;class&apos;])</div><div class="line">for key,value in new_df:</div><div class="line">    print(key)</div><div class="line">    print(value) </div><div class="line"></div><div class="line">#分组结果</div><div class="line">bird</div><div class="line">       class  max_speed</div><div class="line">falcon  bird      389.0</div><div class="line">parrot  bird       24.0</div><div class="line">mammal</div><div class="line">         class  max_speed</div><div class="line">lion    mammal       80.5</div><div class="line">monkey  mammal        NaN</div></pre></td></tr></table></figure>
+<h2 id="2-groupby-mean-计算分组后的平均值，只有numerical值才会纳入计算"><a href="#2-groupby-mean-计算分组后的平均值，只有numerical值才会纳入计算" class="headerlink" title="2. groupby().mean() 计算分组后的平均值，只有numerical值才会纳入计算"></a>2. groupby().mean() 计算分组后的平均值，只有numerical值才会纳入计算</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">df.groupby([&apos;class&apos;]).mean()</div><div class="line"></div><div class="line">	max_speed</div><div class="line">class	</div><div class="line">bird	206.5</div><div class="line">mammal	80.5</div></pre></td></tr></table></figure>
+<h2 id="3-groupby-agg-聚合函数的使用"><a href="#3-groupby-agg-聚合函数的使用" class="headerlink" title="3. groupby.agg() 聚合函数的使用"></a>3. groupby.agg() 聚合函数的使用</h2><p><strong>可以将多个函数聚合在一起使用，非常的方面快捷。</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; df = pd.DataFrame(&#123;&apos;A&apos;: [1, 1, 2, 2],</div><div class="line">...                    &apos;B&apos;: [1, 2, 3, 4],</div><div class="line">...                    &apos;C&apos;: np.random.randn(4)&#125;)</div><div class="line">&gt;&gt;&gt; df</div><div class="line">   A  B         C</div><div class="line">0  1  1  0.362838</div><div class="line">1  1  2  0.227877</div><div class="line">2  2  3  1.267767</div><div class="line">3  2  4 -0.562860</div><div class="line"></div><div class="line"># 以A分组，并找出每组最小及最大值。</div><div class="line">&gt;&gt;&gt; df.groupby(&apos;A&apos;).agg([&apos;min&apos;, &apos;max&apos;])</div><div class="line">    B             C</div><div class="line">  min max       min       max</div><div class="line">A</div><div class="line">1   1   2  0.227877  0.362838</div><div class="line">2   3   4 -0.562860  1.267767</div><div class="line"></div><div class="line"># 以A分组，选择B列中的最小最大值。</div><div class="line">&gt;&gt;&gt; df.groupby(&apos;A&apos;).B.agg([&apos;min&apos;, &apos;max&apos;])</div><div class="line">   min  max</div><div class="line">A</div><div class="line">1    1    2</div><div class="line">2    3    4</div><div class="line"></div><div class="line"># 以A分组，对B和C列分别操作</div><div class="line">&gt;&gt;&gt; df.groupby(&apos;A&apos;).agg(&#123;&apos;B&apos;: [&apos;min&apos;, &apos;max&apos;], &apos;C&apos;: &apos;sum&apos;&#125;)</div><div class="line">    B             C</div><div class="line">  min max       sum</div><div class="line">A</div><div class="line">1   1   2  0.590716</div><div class="line">2   3   4  0.704907</div></pre></td></tr></table></figure>
+<h2 id="4-其他函数"><a href="#4-其他函数" class="headerlink" title="4. 其他函数"></a>4. 其他函数</h2><ul>
+<li>groupby.size()</li>
+<li>groupby.count()</li>
+<li>groupby.first(), groupby.last()</li>
+<li>groupby.head(), groupby.tail()</li>
+<li>groupby.max(), groupby.min(),获得分组数据中最大/最小的值</li>
+</ul>
 
       
     </div>
@@ -370,13 +399,19 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Pandas/" rel="tag"># Pandas</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/01/Pandas-基本数据处理/" rel="next" title="Pandas 基本数据处理">
-                <i class="fa fa-chevron-left"></i> Pandas 基本数据处理
+              <a href="/2018/04/05/Pandas-中索引设置及查找/" rel="next" title="Pandas 中的索引设置及查找">
+                <i class="fa fa-chevron-left"></i> Pandas 中的索引设置及查找
               </a>
             
           </div>
@@ -384,10 +419,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/05/Pandas-中索引设置及查找/" rel="prev" title="Pandas 中的索引设置及查找">
-                Pandas 中的索引设置及查找 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -436,8 +467,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2018/04/03/Pandas-基本绘图/"
-           data-title="Pandas 基本绘图" data-url="http://yoursite.com/2018/04/03/Pandas-基本绘图/">
+      <div class="ds-thread" data-thread-key="2018/04/06/Pandas中Groupby的使用/"
+           data-title="Pandas中Groupby的使用" data-url="http://yoursite.com/2018/04/06/Pandas中Groupby的使用/">
       </div>
     
   </div>
@@ -557,7 +588,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-图的类型。主要有3种，线状图，直方图，饼图。"><span class="nav-number">1.</span> <span class="nav-text">1. 图的类型。主要有3种，线状图，直方图，饼图。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-图的颜色和尺寸。"><span class="nav-number">2.</span> <span class="nav-text">2. 图的颜色和尺寸。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-使用seaborn画图。Seaborn是基于matplotlib的一个可视化工具库，画的图更加的精美。需要单独安装。"><span class="nav-number">3.</span> <span class="nav-text">3. 使用seaborn画图。Seaborn是基于matplotlib的一个可视化工具库，画的图更加的精美。需要单独安装。</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Groupby用于数据分组"><span class="nav-number">1.</span> <span class="nav-text">1. Groupby用于数据分组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-groupby-mean-计算分组后的平均值，只有numerical值才会纳入计算"><span class="nav-number">2.</span> <span class="nav-text">2. groupby().mean() 计算分组后的平均值，只有numerical值才会纳入计算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-groupby-agg-聚合函数的使用"><span class="nav-number">3.</span> <span class="nav-text">3. groupby.agg() 聚合函数的使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-其他函数"><span class="nav-number">4.</span> <span class="nav-text">4. 其他函数</span></a></li></ol></div>
             
 
           </div>

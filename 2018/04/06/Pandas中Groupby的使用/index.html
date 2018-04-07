@@ -84,16 +84,16 @@
 
 
 
-<meta name="description" content="1. Groupby用于数据分组123456789101112131415161718192021222324252627import pandas as pdimport numpy as npdf = pd.DataFrame([(&amp;apos;bird&amp;apos;,    389.0),(&amp;apos;bird&amp;apos;,     24.0),(&amp;apos;mammal&amp;apos;,   80">
+<meta name="description" content="1. Groupby用于数据分组">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Pandas中Groupby的使用">
 <meta property="og:url" content="http://yoursite.com/2018/04/06/Pandas中Groupby的使用/index.html">
 <meta property="og:site_name" content="沧海拾珠">
-<meta property="og:description" content="1. Groupby用于数据分组123456789101112131415161718192021222324252627import pandas as pdimport numpy as npdf = pd.DataFrame([(&amp;apos;bird&amp;apos;,    389.0),(&amp;apos;bird&amp;apos;,     24.0),(&amp;apos;mammal&amp;apos;,   80">
-<meta property="og:updated_time" content="2018-04-06T08:54:35.540Z">
+<meta property="og:description" content="1. Groupby用于数据分组">
+<meta property="og:updated_time" content="2018-04-07T04:33:44.439Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Pandas中Groupby的使用">
-<meta name="twitter:description" content="1. Groupby用于数据分组123456789101112131415161718192021222324252627import pandas as pdimport numpy as npdf = pd.DataFrame([(&amp;apos;bird&amp;apos;,    389.0),(&amp;apos;bird&amp;apos;,     24.0),(&amp;apos;mammal&amp;apos;,   80">
+<meta name="twitter:description" content="1. Groupby用于数据分组">
 
 
 
@@ -367,7 +367,8 @@
       
 
       
-        <h2 id="1-Groupby用于数据分组"><a href="#1-Groupby用于数据分组" class="headerlink" title="1. Groupby用于数据分组"></a>1. Groupby用于数据分组</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">import pandas as pd</div><div class="line">import numpy as np</div><div class="line">df = pd.DataFrame([(&apos;bird&apos;,    389.0),(&apos;bird&apos;,     24.0),(&apos;mammal&apos;,   80.5),(&apos;mammal&apos;, np.nan)],</div><div class="line">                      index=[&apos;falcon&apos;, &apos;parrot&apos;, &apos;lion&apos;, &apos;monkey&apos;],</div><div class="line">                      columns=(&apos;class&apos;, &apos;max_speed&apos;))</div><div class="line"></div><div class="line">	class	max_speed</div><div class="line">falcon	bird	389.0</div><div class="line">parrot	bird	24.0</div><div class="line">lion	mammal	80.5</div><div class="line">monkey	mammal	NaN  </div><div class="line"></div><div class="line"># 对class进行分组并打印出来</div><div class="line">new_df = df.groupby([&apos;class&apos;])</div><div class="line">for key,value in new_df:</div><div class="line">    print(key)</div><div class="line">    print(value) </div><div class="line"></div><div class="line">#分组结果</div><div class="line">bird</div><div class="line">       class  max_speed</div><div class="line">falcon  bird      389.0</div><div class="line">parrot  bird       24.0</div><div class="line">mammal</div><div class="line">         class  max_speed</div><div class="line">lion    mammal       80.5</div><div class="line">monkey  mammal        NaN</div></pre></td></tr></table></figure>
+        <h2 id="1-Groupby用于数据分组"><a href="#1-Groupby用于数据分组" class="headerlink" title="1. Groupby用于数据分组"></a>1. Groupby用于数据分组</h2><a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">import pandas as pd</div><div class="line">import numpy as np</div><div class="line">df = pd.DataFrame([(&apos;bird&apos;,    389.0),(&apos;bird&apos;,     24.0),(&apos;mammal&apos;,   80.5),(&apos;mammal&apos;, np.nan)],</div><div class="line">                      index=[&apos;falcon&apos;, &apos;parrot&apos;, &apos;lion&apos;, &apos;monkey&apos;],</div><div class="line">                      columns=(&apos;class&apos;, &apos;max_speed&apos;))</div><div class="line"></div><div class="line">	class	max_speed</div><div class="line">falcon	bird	389.0</div><div class="line">parrot	bird	24.0</div><div class="line">lion	mammal	80.5</div><div class="line">monkey	mammal	NaN  </div><div class="line"></div><div class="line"># 对class进行分组并打印出来</div><div class="line">new_df = df.groupby([&apos;class&apos;])</div><div class="line">for key,value in new_df:</div><div class="line">    print(key)</div><div class="line">    print(value) </div><div class="line"></div><div class="line">#分组结果</div><div class="line">bird</div><div class="line">       class  max_speed</div><div class="line">falcon  bird      389.0</div><div class="line">parrot  bird       24.0</div><div class="line">mammal</div><div class="line">         class  max_speed</div><div class="line">lion    mammal       80.5</div><div class="line">monkey  mammal        NaN</div></pre></td></tr></table></figure>
 <h2 id="2-groupby-mean-计算分组后的平均值，只有numerical值才会纳入计算"><a href="#2-groupby-mean-计算分组后的平均值，只有numerical值才会纳入计算" class="headerlink" title="2. groupby().mean() 计算分组后的平均值，只有numerical值才会纳入计算"></a>2. groupby().mean() 计算分组后的平均值，只有numerical值才会纳入计算</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">df.groupby([&apos;class&apos;]).mean()</div><div class="line"></div><div class="line">	max_speed</div><div class="line">class	</div><div class="line">bird	206.5</div><div class="line">mammal	80.5</div></pre></td></tr></table></figure>
 <h2 id="3-groupby-agg-聚合函数的使用"><a href="#3-groupby-agg-聚合函数的使用" class="headerlink" title="3. groupby.agg() 聚合函数的使用"></a>3. groupby.agg() 聚合函数的使用</h2><p><strong>可以将多个函数聚合在一起使用，非常的方面快捷。</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; df = pd.DataFrame(&#123;&apos;A&apos;: [1, 1, 2, 2],</div><div class="line">...                    &apos;B&apos;: [1, 2, 3, 4],</div><div class="line">...                    &apos;C&apos;: np.random.randn(4)&#125;)</div><div class="line">&gt;&gt;&gt; df</div><div class="line">   A  B         C</div><div class="line">0  1  1  0.362838</div><div class="line">1  1  2  0.227877</div><div class="line">2  2  3  1.267767</div><div class="line">3  2  4 -0.562860</div><div class="line"></div><div class="line"># 以A分组，并找出每组最小及最大值。</div><div class="line">&gt;&gt;&gt; df.groupby(&apos;A&apos;).agg([&apos;min&apos;, &apos;max&apos;])</div><div class="line">    B             C</div><div class="line">  min max       min       max</div><div class="line">A</div><div class="line">1   1   2  0.227877  0.362838</div><div class="line">2   3   4 -0.562860  1.267767</div><div class="line"></div><div class="line"># 以A分组，选择B列中的最小最大值。</div><div class="line">&gt;&gt;&gt; df.groupby(&apos;A&apos;).B.agg([&apos;min&apos;, &apos;max&apos;])</div><div class="line">   min  max</div><div class="line">A</div><div class="line">1    1    2</div><div class="line">2    3    4</div><div class="line"></div><div class="line"># 以A分组，对B和C列分别操作</div><div class="line">&gt;&gt;&gt; df.groupby(&apos;A&apos;).agg(&#123;&apos;B&apos;: [&apos;min&apos;, &apos;max&apos;], &apos;C&apos;: &apos;sum&apos;&#125;)</div><div class="line">    B             C</div><div class="line">  min max       sum</div><div class="line">A</div><div class="line">1   1   2  0.590716</div><div class="line">2   3   4  0.704907</div></pre></td></tr></table></figure>
@@ -419,6 +420,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/04/07/Pandas中unstack和stack用法/" rel="prev" title="Pandas中unstack和stack用法">
+                Pandas中unstack和stack用法 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -515,7 +520,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -533,7 +538,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

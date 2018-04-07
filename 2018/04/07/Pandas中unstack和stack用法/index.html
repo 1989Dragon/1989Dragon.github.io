@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="生物," />
+  <meta name="keywords" content="Pandas," />
 
 
 
@@ -84,21 +84,16 @@
 
 
 
-<meta name="description" content="最近几天都在学习一个生物学算法，就是名垂史册的Smith-Waterman 算法。早在1970年，Saul B. Needleman和 Christian D. Wunsch 两位科学家发明了Needleman-Wunsch 算法，旨在解决生物学上DNA和蛋白质序列比对相似度相关的问题。">
+<meta name="description" content="1. DataFrame.unstack(level = -1 , fill_value = None)，unstack 本身意为不堆叠，这里我理解为将数据结构展开。level值可以改为其他值，如0。fill_value可以指定空白值为多少，如fill_value = 0。此外还可以将需要unstack的元素传入作为参数，如DataFrame.unstack(‘Medal’)。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="生物序列比对算法 Smith-Waterman 简介">
-<meta property="og:url" content="http://yoursite.com/2017/02/12/生物序列比对算法-Smith-Waterman-简介/index.html">
+<meta property="og:title" content="Pandas中unstack和stack用法">
+<meta property="og:url" content="http://yoursite.com/2018/04/07/Pandas中unstack和stack用法/index.html">
 <meta property="og:site_name" content="沧海拾珠">
-<meta property="og:description" content="最近几天都在学习一个生物学算法，就是名垂史册的Smith-Waterman 算法。早在1970年，Saul B. Needleman和 Christian D. Wunsch 两位科学家发明了Needleman-Wunsch 算法，旨在解决生物学上DNA和蛋白质序列比对相似度相关的问题。">
-<meta property="og:image" content="http://ok4fr796i.bkt.clouddn.com/20170222_1.png">
-<meta property="og:image" content="http://ok4fr796i.bkt.clouddn.com/20170222_2.png">
-<meta property="og:image" content="http://ok4fr796i.bkt.clouddn.com/20170222_3.png">
-<meta property="og:image" content="http://ok4fr796i.bkt.clouddn.com/20170222_4.png">
-<meta property="og:updated_time" content="2017-02-22T14:07:14.164Z">
+<meta property="og:description" content="1. DataFrame.unstack(level = -1 , fill_value = None)，unstack 本身意为不堆叠，这里我理解为将数据结构展开。level值可以改为其他值，如0。fill_value可以指定空白值为多少，如fill_value = 0。此外还可以将需要unstack的元素传入作为参数，如DataFrame.unstack(‘Medal’)。">
+<meta property="og:updated_time" content="2018-04-07T05:01:22.085Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="生物序列比对算法 Smith-Waterman 简介">
-<meta name="twitter:description" content="最近几天都在学习一个生物学算法，就是名垂史册的Smith-Waterman 算法。早在1970年，Saul B. Needleman和 Christian D. Wunsch 两位科学家发明了Needleman-Wunsch 算法，旨在解决生物学上DNA和蛋白质序列比对相似度相关的问题。">
-<meta name="twitter:image" content="http://ok4fr796i.bkt.clouddn.com/20170222_1.png">
+<meta name="twitter:title" content="Pandas中unstack和stack用法">
+<meta name="twitter:description" content="1. DataFrame.unstack(level = -1 , fill_value = None)，unstack 本身意为不堆叠，这里我理解为将数据结构展开。level值可以改为其他值，如0。fill_value可以指定空白值为多少，如fill_value = 0。此外还可以将需要unstack的元素传入作为参数，如DataFrame.unstack(‘Medal’)。">
 
 
 
@@ -126,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/12/生物序列比对算法-Smith-Waterman-简介/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/07/Pandas中unstack和stack用法/"/>
 
 
 
 
 
-  <title> 生物序列比对算法 Smith-Waterman 简介 | 沧海拾珠 </title>
+  <title> Pandas中unstack和stack用法 | 沧海拾珠 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -265,7 +260,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/12/生物序列比对算法-Smith-Waterman-简介/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/07/Pandas中unstack和stack用法/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="芥龙">
@@ -289,7 +284,7 @@
             
             
               
-                生物序列比对算法 Smith-Waterman 简介
+                Pandas中unstack和stack用法
               
             
           </h1>
@@ -304,8 +299,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-12T20:23:48+08:00">
-                2017-02-12
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-07T12:32:32+08:00">
+                2018-04-07
               </time>
             
 
@@ -345,8 +340,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/12/生物序列比对算法-Smith-Waterman-简介/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/12/生物序列比对算法-Smith-Waterman-简介/" itemprop="commentCount"></span>
+                <a href="/2018/04/07/Pandas中unstack和stack用法/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/04/07/Pandas中unstack和stack用法/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -372,8 +367,13 @@
       
 
       
-        <p>最近几天都在学习一个生物学算法，就是名垂史册的Smith-Waterman 算法。早在1970年，Saul B. Needleman和 Christian D. Wunsch 两位科学家发明了Needleman-Wunsch 算法，旨在解决生物学上DNA和蛋白质序列比对相似度相关的问题。<a id="more"></a>之后由Temple F. Smith 和 Michael S. Waterman进一步改进，于1981年提出了Smith-Waterman 算法。相比于前者，算法中仅仅多了一个0，但为此就花了十年时间，真是令人感概。Needleman-Wunsch算法侧重于全局序列比对，而Smith-Waterman算法侧重于局部比对。两种算法最初都以打分矩阵为模型来实现短序列的比对的，之后通过动态编程来对长序列进行比对。<br><img src="http://ok4fr796i.bkt.clouddn.com/20170222_1.png" alt="两种算法"><br><img src="http://ok4fr796i.bkt.clouddn.com/20170222_2.png" alt="示例"><br>S(xi, yj)是碱基相似度得分，相同则为正数，不同则为负数。d是空位罚分，为负数。公式看起来非常简单，然而需要注意的是，在计算每一个位点的得分时，需要考虑四个值，F(i-1,j-1)+S(xi+yj), F(i-1,j)+d, F(i,j-1)+d和0。它们之中最大的值才能作为F(i,j)这个位点的值。图中F(G,G)的值就由其斜对角，上面，左边三者得来，取最大值，如果小于0，则用0代替。最后就得到一个得分矩阵。之后是回溯过程，目的是为找到最佳的局部比对结果。从得分最高的位点开始，在其斜对角，上面和左边三者找出之前使其得分最大的那个位点。以此类推，直到位点分数为0的地方停止，这样将得到局部最优的相似序列。需要注意的是数直方向出现连续，则x轴上的序列要引入空位（-），水平方向出现连续，则y轴上的序列要引入空位（-）。此外，要得到局部次优的序列，则从最优序列停止的外围重新开始新一轮的序列回溯。<br><img src="http://ok4fr796i.bkt.clouddn.com/20170222_3.png" alt=""><br><img src="http://ok4fr796i.bkt.clouddn.com/20170222_4.png" alt=""><br>注：图片来自Wiki百科</p>
-
+        <h2 id="1-DataFrame-unstack-level-1-fill-value-None-，unstack-本身意为不堆叠，这里我理解为将数据结构展开。"><a href="#1-DataFrame-unstack-level-1-fill-value-None-，unstack-本身意为不堆叠，这里我理解为将数据结构展开。" class="headerlink" title="1. DataFrame.unstack(level = -1 , fill_value = None)，unstack 本身意为不堆叠，这里我理解为将数据结构展开。"></a>1. DataFrame.unstack(level = -1 , fill_value = None)，unstack 本身意为不堆叠，这里我理解为将数据结构展开。</h2><p>level值可以改为其他值，如0。fill_value可以指定空白值为多少，如fill_value = 0。此外还可以将需要unstack的元素传入作为参数，如DataFrame.unstack(‘Medal’)。</p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; s</div><div class="line">one  a   1.0</div><div class="line">     b   2.0</div><div class="line">two  a   3.0</div><div class="line">     b   4.0</div><div class="line"></div><div class="line">&gt;&gt;&gt; s.unstack()</div><div class="line">     a   b</div><div class="line">one  1.0  2.0</div><div class="line">two  3.0  4.0</div><div class="line"></div><div class="line">&gt;&gt;&gt; s.unstack(level=0)</div><div class="line">   one  two</div><div class="line">a  1.0   3.0</div><div class="line">b  2.0   4.0</div></pre></td></tr></table></figure>
+<p>当dataFrame用到分组groupby的时候，数据会堆叠在一起，如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">df.groupby([&apos;Edition&apos;,&apos;Medal&apos;]).size()</div><div class="line"></div><div class="line">thlete                   Medal </div><div class="line">AABYE, Edgar              Gold      1</div><div class="line">AALTONEN, Arvo Ossian     Bronze    2</div><div class="line">AALTONEN, Paavo Johannes  Bronze    2</div><div class="line">                          Gold      3</div><div class="line">AAMODT, Ragnhild          Gold      1</div><div class="line">AANING, Alf Lied          Silver    1</div><div class="line">AARDENBURG, Willemien     Bronze    1</div><div class="line">AARDEWIJN, Pepijn         Silver    1</div></pre></td></tr></table></figure></p>
+<p>使用unstack()<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">df.groupby([&apos;Edition&apos;,&apos;Medal&apos;]).size().unstack()</div><div class="line"></div><div class="line">Medal	             Bronze	Gold	Silver</div><div class="line">Athlete			</div><div class="line">AABYE, Edgar	      NaN	1.0	NaN</div><div class="line">AALTONEN, Arvo Ossian 2.0	NaN	NaN</div><div class="line">AALTONEN, Paavo Johannes2.0	3.0	NaN</div><div class="line">AAMODT, Ragnhild	NaN	1.0	NaN</div><div class="line">AANING, Alf Lied	NaN	NaN	1.0</div><div class="line">AARDENBURG, Willemien	1.0	NaN	NaN</div><div class="line">AARDEWIJN, Pepijn	NaN	NaN	1.0</div></pre></td></tr></table></figure></p>
+<p>应用unstack()之后medal数据分为单独的三列，之后方便作图。</p>
+<h2 id="2-DataFrame-stack-level-1-dropna-True-，暂时还没用到这个功能。"><a href="#2-DataFrame-stack-level-1-dropna-True-，暂时还没用到这个功能。" class="headerlink" title="2. DataFrame.stack(level = -1, dropna = True)，暂时还没用到这个功能。"></a>2. DataFrame.stack(level = -1, dropna = True)，暂时还没用到这个功能。</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; s</div><div class="line">     a   b</div><div class="line">one  1.  2.</div><div class="line">two  3.  4.</div><div class="line">&gt;&gt;&gt; s.stack()</div><div class="line">one a    1</div><div class="line">    b    2</div><div class="line">two a    3</div><div class="line">    b    4</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -396,7 +396,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/生物/" rel="tag"># 生物</a>
+            <a href="/tags/Pandas/" rel="tag"># Pandas</a>
           
         </div>
       
@@ -405,8 +405,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/01/21/Markdown-常用语法命令/" rel="next" title="Markdown 常用语法命令">
-                <i class="fa fa-chevron-left"></i> Markdown 常用语法命令
+              <a href="/2018/04/06/Pandas中Groupby的使用/" rel="next" title="Pandas中Groupby的使用">
+                <i class="fa fa-chevron-left"></i> Pandas中Groupby的使用
               </a>
             
           </div>
@@ -414,10 +414,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/03/31/Pandas 数据输入及验证/" rel="prev" title="Pandas 数据输入及验证">
-                Pandas 数据输入及验证 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -466,8 +462,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/12/生物序列比对算法-Smith-Waterman-简介/"
-           data-title="生物序列比对算法 Smith-Waterman 简介" data-url="http://yoursite.com/2017/02/12/生物序列比对算法-Smith-Waterman-简介/">
+      <div class="ds-thread" data-thread-key="2018/04/07/Pandas中unstack和stack用法/"
+           data-title="Pandas中unstack和stack用法" data-url="http://yoursite.com/2018/04/07/Pandas中unstack和stack用法/">
       </div>
     
   </div>
@@ -491,8 +487,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.jpg"
@@ -568,6 +573,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-DataFrame-unstack-level-1-fill-value-None-，unstack-本身意为不堆叠，这里我理解为将数据结构展开。"><span class="nav-number">1.</span> <span class="nav-text">1. DataFrame.unstack(level = -1 , fill_value = None)，unstack 本身意为不堆叠，这里我理解为将数据结构展开。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-DataFrame-stack-level-1-dropna-True-，暂时还没用到这个功能。"><span class="nav-number">2.</span> <span class="nav-text">2. DataFrame.stack(level = -1, dropna = True)，暂时还没用到这个功能。</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>

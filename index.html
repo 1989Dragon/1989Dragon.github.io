@@ -258,6 +258,157 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/18/Pandas-筛选数据/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="芥龙">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/uploads/avatar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="沧海拾珠">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="沧海拾珠" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2018/04/18/Pandas-筛选数据/" itemprop="url">
+                  Pandas 筛选数据
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-18T20:38:18+08:00">
+                2018-04-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/学习/" itemprop="url" rel="index">
+                    <span itemprop="name">学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/04/18/Pandas-筛选数据/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/04/18/Pandas-筛选数据/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="1-对Series中数据进行筛选操作"><a href="#1-对Series中数据进行筛选操作" class="headerlink" title="1. 对Series中数据进行筛选操作"></a>1. 对Series中数据进行筛选操作</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">import numpy as np</div><div class="line">from pandas import Series, DataFrame</div><div class="line">series_obj = Series(np.arange(8),index = [&apos;row 1&apos;, &apos;row 2&apos;,&apos;row 3&apos;,&apos;row 4&apos;,&apos;row 5&apos;, &apos;row 6&apos;, &apos;row 7&apos;, &apos;row 8&apos;])</div><div class="line"></div><div class="line">#选择单行数据</div><div class="line">series_obj[&apos;row6&apos;]</div><div class="line">5</div><div class="line"></div><div class="line">#选择多行数据</div><div class="line">series_obj[[0,7]]</div><div class="line">row 1    0</div><div class="line">row 8    7</div><div class="line"></div><div class="line">#切片</div><div class="line">series_obj[&apos;row 3&apos;:&apos;row 7&apos;]</div><div class="line">row 3    2</div><div class="line">row 4    3</div><div class="line">row 5    4</div><div class="line">row 6    5</div><div class="line">row 7    6</div><div class="line"></div><div class="line">#条件筛选</div><div class="line">series_obj[series_obj &gt; 6]</div><div class="line">row 8    7</div><div class="line"></div><div class="line">#对数据进行更新或设置</div><div class="line">series_obj[&apos;row 1&apos;, &apos;row 5&apos;, &apos;row 8&apos;] = 8</div></pre></td></tr></table></figure>
+<h2 id="2-对dataFrame中数据进行操作"><a href="#2-对dataFrame中数据进行操作" class="headerlink" title="2. 对dataFrame中数据进行操作"></a>2. 对dataFrame中数据进行操作</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">#新建一个随机dataFrame</div><div class="line">np.random.seed(30) #保证产生的随机数都是相同的</div><div class="line">DF_obj = DataFrame(np.random.rand(25).reshape((5,5)),</div><div class="line">                 index = [&apos;row 1&apos;, &apos;row 2&apos;, &apos;row 3&apos;, &apos;row 4&apos;, &apos;row 5&apos;], </div><div class="line">                 columns = [&apos;column 1&apos;, &apos;column 2&apos;, &apos;column 3&apos;, &apos;column 4&apos;, &apos;column 5&apos;])</div><div class="line"></div><div class="line">#使用行index和列column信息获取数据</div><div class="line">DF_obj.loc[[&apos;row 1&apos;, &apos;row 3&apos;],[&apos;column 2&apos;, &apos;column 5&apos;]]</div><div class="line">	column 2	column 5</div><div class="line">row 1	0.380748	0.962608</div><div class="line">row 3	0.544136	0.933850</div><div class="line"></div><div class="line">#使用行和列位置信息获取数据</div><div class="line">DF_obj.iloc[[2, 4],[1, 4]]</div><div class="line">	column 2	column 5</div><div class="line">row 3	0.544136	0.933850</div><div class="line">row 5	0.734953	0.902514</div><div class="line"></div><div class="line">#筛选或判断数据</div><div class="line">DF_obj&gt;.3</div><div class="line">	column 1	column 2	column 3	column 4	column 5</div><div class="line">row 1	True	True	True	False	True</div><div class="line">row 2	True	True	False	True	True</div><div class="line">row 3	False	True	True	True	True</div><div class="line">row 4	False	False	True	False	False</div><div class="line">row 5	True	True	True	False	True</div></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
   <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/08/Pandas 画图自定义颜色/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1654,161 +1805,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/20/上海居住证办理条件及流程？/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="芥龙">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/uploads/avatar.jpg">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="沧海拾珠">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="沧海拾珠" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/01/20/上海居住证办理条件及流程？/" itemprop="url">
-                  上海居住证办理条件及流程？
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-20T22:54:23+08:00">
-                2017-01-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/生活/" itemprop="url" rel="index">
-                    <span itemprop="name">生活</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/01/20/上海居住证办理条件及流程？/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/20/上海居住证办理条件及流程？/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>　　大约一个半月以前，我和室友开始商量着办理一下上海这边的居住证，在那之前我在网上看了几个网友的办理流程，觉得真真假假，不好分辨。主要是房屋租赁合同备案这一块，大部分人都说得不太详细。其次是是否交税，也就是办理居住证是否要额外花钱的问题，没有统一说法。我在网上看到有人说办理此证跟小区居委会无关，也不用交钱，但我室友不信，说他周围的朋友都花了不少钱才办理下来。于是，我们找时间去问了一下居委会，也因此埋下了被坑的伏笔。
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/01/20/上海居住证办理条件及流程？/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1856,7 +1852,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="生物," />
+  <meta name="keywords" content="Pandas," />
 
 
 
@@ -84,21 +84,16 @@
 
 
 
-<meta name="description" content="最近几天都在学习一个生物学算法，就是名垂史册的Smith-Waterman 算法。早在1970年，Saul B. Needleman和 Christian D. Wunsch 两位科学家发明了Needleman-Wunsch 算法，旨在解决生物学上DNA和蛋白质序列比对相似度相关的问题。">
+<meta name="description" content="1. 对Series中数据进行筛选操作123456789101112131415161718192021222324252627import numpy as npfrom pandas import Series, DataFrameseries_obj = Series(np.arange(8),index = [&amp;apos;row 1&amp;apos;, &amp;apos;row 2&amp;apos;,&amp;ap">
 <meta property="og:type" content="article">
-<meta property="og:title" content="生物序列比对算法 Smith-Waterman 简介">
-<meta property="og:url" content="http://yoursite.com/2017/02/12/生物序列比对算法-Smith-Waterman-简介/index.html">
+<meta property="og:title" content="Pandas 筛选数据">
+<meta property="og:url" content="http://yoursite.com/2018/04/18/Pandas-筛选数据/index.html">
 <meta property="og:site_name" content="沧海拾珠">
-<meta property="og:description" content="最近几天都在学习一个生物学算法，就是名垂史册的Smith-Waterman 算法。早在1970年，Saul B. Needleman和 Christian D. Wunsch 两位科学家发明了Needleman-Wunsch 算法，旨在解决生物学上DNA和蛋白质序列比对相似度相关的问题。">
-<meta property="og:image" content="http://ok4fr796i.bkt.clouddn.com/20170222_1.png">
-<meta property="og:image" content="http://ok4fr796i.bkt.clouddn.com/20170222_2.png">
-<meta property="og:image" content="http://ok4fr796i.bkt.clouddn.com/20170222_3.png">
-<meta property="og:image" content="http://ok4fr796i.bkt.clouddn.com/20170222_4.png">
-<meta property="og:updated_time" content="2017-02-22T14:07:14.164Z">
+<meta property="og:description" content="1. 对Series中数据进行筛选操作123456789101112131415161718192021222324252627import numpy as npfrom pandas import Series, DataFrameseries_obj = Series(np.arange(8),index = [&amp;apos;row 1&amp;apos;, &amp;apos;row 2&amp;apos;,&amp;ap">
+<meta property="og:updated_time" content="2018-04-18T13:00:47.118Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="生物序列比对算法 Smith-Waterman 简介">
-<meta name="twitter:description" content="最近几天都在学习一个生物学算法，就是名垂史册的Smith-Waterman 算法。早在1970年，Saul B. Needleman和 Christian D. Wunsch 两位科学家发明了Needleman-Wunsch 算法，旨在解决生物学上DNA和蛋白质序列比对相似度相关的问题。">
-<meta name="twitter:image" content="http://ok4fr796i.bkt.clouddn.com/20170222_1.png">
+<meta name="twitter:title" content="Pandas 筛选数据">
+<meta name="twitter:description" content="1. 对Series中数据进行筛选操作123456789101112131415161718192021222324252627import numpy as npfrom pandas import Series, DataFrameseries_obj = Series(np.arange(8),index = [&amp;apos;row 1&amp;apos;, &amp;apos;row 2&amp;apos;,&amp;ap">
 
 
 
@@ -126,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/12/生物序列比对算法-Smith-Waterman-简介/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/18/Pandas-筛选数据/"/>
 
 
 
 
 
-  <title> 生物序列比对算法 Smith-Waterman 简介 | 沧海拾珠 </title>
+  <title> Pandas 筛选数据 | 沧海拾珠 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -265,7 +260,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/12/生物序列比对算法-Smith-Waterman-简介/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/18/Pandas-筛选数据/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="芥龙">
@@ -289,7 +284,7 @@
             
             
               
-                生物序列比对算法 Smith-Waterman 简介
+                Pandas 筛选数据
               
             
           </h1>
@@ -304,8 +299,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-12T20:23:48+08:00">
-                2017-02-12
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-18T20:38:18+08:00">
+                2018-04-18
               </time>
             
 
@@ -345,8 +340,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/12/生物序列比对算法-Smith-Waterman-简介/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/12/生物序列比对算法-Smith-Waterman-简介/" itemprop="commentCount"></span>
+                <a href="/2018/04/18/Pandas-筛选数据/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/04/18/Pandas-筛选数据/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -372,8 +367,8 @@
       
 
       
-        <p>最近几天都在学习一个生物学算法，就是名垂史册的Smith-Waterman 算法。早在1970年，Saul B. Needleman和 Christian D. Wunsch 两位科学家发明了Needleman-Wunsch 算法，旨在解决生物学上DNA和蛋白质序列比对相似度相关的问题。<a id="more"></a>之后由Temple F. Smith 和 Michael S. Waterman进一步改进，于1981年提出了Smith-Waterman 算法。相比于前者，算法中仅仅多了一个0，但为此就花了十年时间，真是令人感概。Needleman-Wunsch算法侧重于全局序列比对，而Smith-Waterman算法侧重于局部比对。两种算法最初都以打分矩阵为模型来实现短序列的比对的，之后通过动态编程来对长序列进行比对。<br><img src="http://ok4fr796i.bkt.clouddn.com/20170222_1.png" alt="两种算法"><br><img src="http://ok4fr796i.bkt.clouddn.com/20170222_2.png" alt="示例"><br>S(xi, yj)是碱基相似度得分，相同则为正数，不同则为负数。d是空位罚分，为负数。公式看起来非常简单，然而需要注意的是，在计算每一个位点的得分时，需要考虑四个值，F(i-1,j-1)+S(xi+yj), F(i-1,j)+d, F(i,j-1)+d和0。它们之中最大的值才能作为F(i,j)这个位点的值。图中F(G,G)的值就由其斜对角，上面，左边三者得来，取最大值，如果小于0，则用0代替。最后就得到一个得分矩阵。之后是回溯过程，目的是为找到最佳的局部比对结果。从得分最高的位点开始，在其斜对角，上面和左边三者找出之前使其得分最大的那个位点。以此类推，直到位点分数为0的地方停止，这样将得到局部最优的相似序列。需要注意的是数直方向出现连续，则x轴上的序列要引入空位（-），水平方向出现连续，则y轴上的序列要引入空位（-）。此外，要得到局部次优的序列，则从最优序列停止的外围重新开始新一轮的序列回溯。<br><img src="http://ok4fr796i.bkt.clouddn.com/20170222_3.png" alt=""><br><img src="http://ok4fr796i.bkt.clouddn.com/20170222_4.png" alt=""><br>注：图片来自Wiki百科</p>
-
+        <h2 id="1-对Series中数据进行筛选操作"><a href="#1-对Series中数据进行筛选操作" class="headerlink" title="1. 对Series中数据进行筛选操作"></a>1. 对Series中数据进行筛选操作</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">import numpy as np</div><div class="line">from pandas import Series, DataFrame</div><div class="line">series_obj = Series(np.arange(8),index = [&apos;row 1&apos;, &apos;row 2&apos;,&apos;row 3&apos;,&apos;row 4&apos;,&apos;row 5&apos;, &apos;row 6&apos;, &apos;row 7&apos;, &apos;row 8&apos;])</div><div class="line"></div><div class="line">#选择单行数据</div><div class="line">series_obj[&apos;row6&apos;]</div><div class="line">5</div><div class="line"></div><div class="line">#选择多行数据</div><div class="line">series_obj[[0,7]]</div><div class="line">row 1    0</div><div class="line">row 8    7</div><div class="line"></div><div class="line">#切片</div><div class="line">series_obj[&apos;row 3&apos;:&apos;row 7&apos;]</div><div class="line">row 3    2</div><div class="line">row 4    3</div><div class="line">row 5    4</div><div class="line">row 6    5</div><div class="line">row 7    6</div><div class="line"></div><div class="line">#条件筛选</div><div class="line">series_obj[series_obj &gt; 6]</div><div class="line">row 8    7</div><div class="line"></div><div class="line">#对数据进行更新或设置</div><div class="line">series_obj[&apos;row 1&apos;, &apos;row 5&apos;, &apos;row 8&apos;] = 8</div></pre></td></tr></table></figure>
+<h2 id="2-对dataFrame中数据进行操作"><a href="#2-对dataFrame中数据进行操作" class="headerlink" title="2. 对dataFrame中数据进行操作"></a>2. 对dataFrame中数据进行操作</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">#新建一个随机dataFrame</div><div class="line">np.random.seed(30) #保证产生的随机数都是相同的</div><div class="line">DF_obj = DataFrame(np.random.rand(25).reshape((5,5)),</div><div class="line">                 index = [&apos;row 1&apos;, &apos;row 2&apos;, &apos;row 3&apos;, &apos;row 4&apos;, &apos;row 5&apos;], </div><div class="line">                 columns = [&apos;column 1&apos;, &apos;column 2&apos;, &apos;column 3&apos;, &apos;column 4&apos;, &apos;column 5&apos;])</div><div class="line"></div><div class="line">#使用行index和列column信息获取数据</div><div class="line">DF_obj.loc[[&apos;row 1&apos;, &apos;row 3&apos;],[&apos;column 2&apos;, &apos;column 5&apos;]]</div><div class="line">	column 2	column 5</div><div class="line">row 1	0.380748	0.962608</div><div class="line">row 3	0.544136	0.933850</div><div class="line"></div><div class="line">#使用行和列位置信息获取数据</div><div class="line">DF_obj.iloc[[2, 4],[1, 4]]</div><div class="line">	column 2	column 5</div><div class="line">row 3	0.544136	0.933850</div><div class="line">row 5	0.734953	0.902514</div><div class="line"></div><div class="line">#筛选或判断数据</div><div class="line">DF_obj&gt;.3</div><div class="line">	column 1	column 2	column 3	column 4	column 5</div><div class="line">row 1	True	True	True	False	True</div><div class="line">row 2	True	True	False	True	True</div><div class="line">row 3	False	True	True	True	True</div><div class="line">row 4	False	False	True	False	False</div><div class="line">row 5	True	True	True	False	True</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -396,7 +391,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/生物/" rel="tag"># 生物</a>
+            <a href="/tags/Pandas/" rel="tag"># Pandas</a>
           
         </div>
       
@@ -405,8 +400,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/01/21/Markdown-常用语法命令/" rel="next" title="Markdown 常用语法命令">
-                <i class="fa fa-chevron-left"></i> Markdown 常用语法命令
+              <a href="/2018/04/08/Pandas 画图自定义颜色/" rel="next" title="Pandas画图自定义颜色">
+                <i class="fa fa-chevron-left"></i> Pandas画图自定义颜色
               </a>
             
           </div>
@@ -414,10 +409,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/03/31/Pandas 数据输入及验证/" rel="prev" title="Pandas 数据输入及验证">
-                Pandas 数据输入及验证 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -466,8 +457,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/12/生物序列比对算法-Smith-Waterman-简介/"
-           data-title="生物序列比对算法 Smith-Waterman 简介" data-url="http://yoursite.com/2017/02/12/生物序列比对算法-Smith-Waterman-简介/">
+      <div class="ds-thread" data-thread-key="2018/04/18/Pandas-筛选数据/"
+           data-title="Pandas 筛选数据" data-url="http://yoursite.com/2018/04/18/Pandas-筛选数据/">
       </div>
     
   </div>
@@ -491,8 +482,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.jpg"
@@ -568,6 +568,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-对Series中数据进行筛选操作"><span class="nav-number">1.</span> <span class="nav-text">1. 对Series中数据进行筛选操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-对dataFrame中数据进行操作"><span class="nav-number">2.</span> <span class="nav-text">2. 对dataFrame中数据进行操作</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>

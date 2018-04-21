@@ -84,16 +84,16 @@
 
 
 
-<meta name="description" content="1. 对Series中数据进行筛选操作12345678910111213141516171819202122232425262728import numpy as npfrom pandas import Series, DataFrameseries_obj = Series(np.arange(8),index = [&amp;apos;row 1&amp;apos;, &amp;apos;row 2&amp;apos;,&amp;">
+<meta name="description" content="1. 对Series中数据进行筛选操作1234567import numpy as npfrom pandas import Series, DataFrameseries_obj = Series(np.arange(8),index = [&amp;apos;row 1&amp;apos;, &amp;apos;row 2&amp;apos;,&amp;apos;row 3&amp;apos;,&amp;apos;row 4&amp;apos;,&amp;apos">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Pandas 筛选数据">
 <meta property="og:url" content="http://yoursite.com/2018/04/18/Pandas-筛选数据/index.html">
 <meta property="og:site_name" content="沧海拾珠">
-<meta property="og:description" content="1. 对Series中数据进行筛选操作12345678910111213141516171819202122232425262728import numpy as npfrom pandas import Series, DataFrameseries_obj = Series(np.arange(8),index = [&amp;apos;row 1&amp;apos;, &amp;apos;row 2&amp;apos;,&amp;">
-<meta property="og:updated_time" content="2018-04-18T13:04:43.683Z">
+<meta property="og:description" content="1. 对Series中数据进行筛选操作1234567import numpy as npfrom pandas import Series, DataFrameseries_obj = Series(np.arange(8),index = [&amp;apos;row 1&amp;apos;, &amp;apos;row 2&amp;apos;,&amp;apos;row 3&amp;apos;,&amp;apos;row 4&amp;apos;,&amp;apos">
+<meta property="og:updated_time" content="2018-04-21T01:52:52.240Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Pandas 筛选数据">
-<meta name="twitter:description" content="1. 对Series中数据进行筛选操作12345678910111213141516171819202122232425262728import numpy as npfrom pandas import Series, DataFrameseries_obj = Series(np.arange(8),index = [&amp;apos;row 1&amp;apos;, &amp;apos;row 2&amp;apos;,&amp;">
+<meta name="twitter:description" content="1. 对Series中数据进行筛选操作1234567import numpy as npfrom pandas import Series, DataFrameseries_obj = Series(np.arange(8),index = [&amp;apos;row 1&amp;apos;, &amp;apos;row 2&amp;apos;,&amp;apos;row 3&amp;apos;,&amp;apos;row 4&amp;apos;,&amp;apos">
 
 
 
@@ -367,7 +367,9 @@
       
 
       
-        <h2 id="1-对Series中数据进行筛选操作"><a href="#1-对Series中数据进行筛选操作" class="headerlink" title="1. 对Series中数据进行筛选操作"></a>1. 对Series中数据进行筛选操作</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">import numpy as np</div><div class="line">from pandas import Series, DataFrame</div><div class="line">series_obj = Series(np.arange(8),index = [&apos;row 1&apos;, &apos;row 2&apos;,&apos;row 3&apos;,&apos;row 4&apos;,&apos;row 5&apos;, &apos;row 6&apos;, &apos;row 7&apos;, &apos;row 8&apos;])</div><div class="line"></div><div class="line">#选择单行数据</div><div class="line">series_obj[&apos;row6&apos;]</div><div class="line">5</div><div class="line"></div><div class="line">&lt;!--more--&gt;</div><div class="line">#选择多行数据</div><div class="line">series_obj[[0,7]]</div><div class="line">row 1    0</div><div class="line">row 8    7</div><div class="line"></div><div class="line">#切片</div><div class="line">series_obj[&apos;row 3&apos;:&apos;row 7&apos;]</div><div class="line">row 3    2</div><div class="line">row 4    3</div><div class="line">row 5    4</div><div class="line">row 6    5</div><div class="line">row 7    6</div><div class="line"></div><div class="line">#条件筛选</div><div class="line">series_obj[series_obj &gt; 6]</div><div class="line">row 8    7</div><div class="line"></div><div class="line">#对数据进行更新或设置</div><div class="line">series_obj[&apos;row 1&apos;, &apos;row 5&apos;, &apos;row 8&apos;] = 8</div></pre></td></tr></table></figure>
+        <h2 id="1-对Series中数据进行筛选操作"><a href="#1-对Series中数据进行筛选操作" class="headerlink" title="1. 对Series中数据进行筛选操作"></a>1. 对Series中数据进行筛选操作</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">import numpy as np</div><div class="line">from pandas import Series, DataFrame</div><div class="line">series_obj = Series(np.arange(8),index = [&apos;row 1&apos;, &apos;row 2&apos;,&apos;row 3&apos;,&apos;row 4&apos;,&apos;row 5&apos;, &apos;row 6&apos;, &apos;row 7&apos;, &apos;row 8&apos;])</div><div class="line"></div><div class="line">#选择单行数据</div><div class="line">series_obj[&apos;row6&apos;]</div><div class="line">5</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">#选择多行数据</div><div class="line">series_obj[[0,7]]</div><div class="line">row 1    0</div><div class="line">row 8    7</div><div class="line"></div><div class="line">#切片</div><div class="line">series_obj[&apos;row 3&apos;:&apos;row 7&apos;]</div><div class="line">row 3    2</div><div class="line">row 4    3</div><div class="line">row 5    4</div><div class="line">row 6    5</div><div class="line">row 7    6</div><div class="line"></div><div class="line">#条件筛选</div><div class="line">series_obj[series_obj &gt; 6]</div><div class="line">row 8    7</div><div class="line"></div><div class="line">#对数据进行更新或设置</div><div class="line">series_obj[&apos;row 1&apos;, &apos;row 5&apos;, &apos;row 8&apos;] = 8</div></pre></td></tr></table></figure>
 <h2 id="2-对dataFrame中数据进行操作"><a href="#2-对dataFrame中数据进行操作" class="headerlink" title="2. 对dataFrame中数据进行操作"></a>2. 对dataFrame中数据进行操作</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">#新建一个随机dataFrame</div><div class="line">np.random.seed(30) #保证产生的随机数都是相同的</div><div class="line">DF_obj = DataFrame(np.random.rand(25).reshape((5,5)),</div><div class="line">                 index = [&apos;row 1&apos;, &apos;row 2&apos;, &apos;row 3&apos;, &apos;row 4&apos;, &apos;row 5&apos;], </div><div class="line">                 columns = [&apos;column 1&apos;, &apos;column 2&apos;, &apos;column 3&apos;, &apos;column 4&apos;, &apos;column 5&apos;])</div><div class="line"></div><div class="line">#使用行index和列column信息获取数据</div><div class="line">DF_obj.loc[[&apos;row 1&apos;, &apos;row 3&apos;],[&apos;column 2&apos;, &apos;column 5&apos;]]</div><div class="line">	column 2	column 5</div><div class="line">row 1	0.380748	0.962608</div><div class="line">row 3	0.544136	0.933850</div><div class="line"></div><div class="line">#使用行和列位置信息获取数据</div><div class="line">DF_obj.iloc[[2, 4],[1, 4]]</div><div class="line">	column 2	column 5</div><div class="line">row 3	0.544136	0.933850</div><div class="line">row 5	0.734953	0.902514</div><div class="line"></div><div class="line">#筛选或判断数据</div><div class="line">DF_obj&gt;.3</div><div class="line">	column 1	column 2	column 3	column 4	column 5</div><div class="line">row 1	True	True	True	False	True</div><div class="line">row 2	True	True	False	True	True</div><div class="line">row 3	False	True	True	True	True</div><div class="line">row 4	False	False	True	False	False</div><div class="line">row 5	True	True	True	False	True</div></pre></td></tr></table></figure>
       
     </div>
@@ -509,7 +511,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -527,7 +529,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

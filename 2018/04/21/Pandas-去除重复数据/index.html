@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Pandas," />
+  <meta name="keywords" content="Pandas,duplicated(),drop_duplicates()," />
 
 
 
@@ -90,7 +90,7 @@
 <meta property="og:url" content="http://yoursite.com/2018/04/21/Pandas-去除重复数据/index.html">
 <meta property="og:site_name" content="沧海拾珠">
 <meta property="og:description" content="1. 找出数据集中的重复数据，使用df.duplicated()1234567891011121314import numpy as npimport pandas as pdfrom pandas import Series, DataFramedf = DataFrame(&amp;#123;&amp;apos;A&amp;apos;:[&amp;apos;Britain&amp;apos;,&amp;apos;USA&amp;apos;,&amp;apo">
-<meta property="og:updated_time" content="2018-04-21T01:28:45.471Z">
+<meta property="og:updated_time" content="2018-04-21T02:54:37.949Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Pandas 去除重复数据">
 <meta name="twitter:description" content="1. 找出数据集中的重复数据，使用df.duplicated()1234567891011121314import numpy as npimport pandas as pdfrom pandas import Series, DataFramedf = DataFrame(&amp;#123;&amp;apos;A&amp;apos;:[&amp;apos;Britain&amp;apos;,&amp;apos;USA&amp;apos;,&amp;apo">
@@ -367,7 +367,8 @@
       
 
       
-        <h2 id="1-找出数据集中的重复数据，使用df-duplicated"><a href="#1-找出数据集中的重复数据，使用df-duplicated" class="headerlink" title="1. 找出数据集中的重复数据，使用df.duplicated()"></a>1. 找出数据集中的重复数据，使用df.duplicated()</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">import numpy as np</div><div class="line">import pandas as pd</div><div class="line">from pandas import Series, DataFrame</div><div class="line">df = DataFrame(&#123;&apos;A&apos;:[&apos;Britain&apos;,&apos;USA&apos;,&apos;USA&apos;,&apos;China&apos;,&apos;China&apos;],</div><div class="line">                &apos;B&apos;:[&apos;BBC&apos;,&apos;NPR&apos;,&apos;NPR&apos;,&apos;CCTV&apos;,&apos;CCTV&apos;],</div><div class="line">               &apos;C&apos;:[&apos;good&apos;,&apos;bad&apos;,&apos;bad&apos;,&apos;great&apos;,&apos;great&apos;]&#125;)</div><div class="line">&lt;!--more--&gt;</div><div class="line">df</div><div class="line">A	B	C</div><div class="line">0	Britain	BBC	good</div><div class="line">1	USA	NPR	bad</div><div class="line">2	USA	NPR	bad</div><div class="line">3	China	CCTV	great</div><div class="line">4	China	CCTV	great</div></pre></td></tr></table></figure>
+        <h2 id="1-找出数据集中的重复数据，使用df-duplicated"><a href="#1-找出数据集中的重复数据，使用df-duplicated" class="headerlink" title="1. 找出数据集中的重复数据，使用df.duplicated()"></a>1. 找出数据集中的重复数据，使用df.duplicated()</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">import numpy as np</div><div class="line">import pandas as pd</div><div class="line">from pandas import Series, DataFrame</div><div class="line">df = DataFrame(&#123;&apos;A&apos;:[&apos;Britain&apos;,&apos;USA&apos;,&apos;USA&apos;,&apos;China&apos;,&apos;China&apos;],</div><div class="line">                &apos;B&apos;:[&apos;BBC&apos;,&apos;NPR&apos;,&apos;NPR&apos;,&apos;CCTV&apos;,&apos;CCTV&apos;],</div><div class="line">               &apos;C&apos;:[&apos;good&apos;,&apos;bad&apos;,&apos;bad&apos;,&apos;great&apos;,&apos;great&apos;]&#125;)</div><div class="line"></div><div class="line">df</div><div class="line">A	B	C</div><div class="line">0	Britain	BBC	good</div><div class="line">1	USA	NPR	bad</div><div class="line">2	USA	NPR	bad</div><div class="line">3	China	CCTV	great</div><div class="line">4	China	CCTV	great</div></pre></td></tr></table></figure>
+<a id="more"></a>
 <p>找出重复数据，返回boolean值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">df.duplicated()</div><div class="line">0    False</div><div class="line">1    False</div><div class="line">2     True</div><div class="line">3    False</div><div class="line">4     True</div></pre></td></tr></table></figure></p>
 <h2 id="2-去除重复的行"><a href="#2-去除重复的行" class="headerlink" title="2.去除重复的行"></a>2.去除重复的行</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">df.drop_duplicates()</div><div class="line">A	B	C</div><div class="line">0	Britain	BBC	good</div><div class="line">1	USA	NPR	bad</div><div class="line">3	China	CCTV	great</div></pre></td></tr></table></figure>
 <h2 id="3-去除含有重复值的列所关联的行"><a href="#3-去除含有重复值的列所关联的行" class="headerlink" title="3. 去除含有重复值的列所关联的行"></a>3. 去除含有重复值的列所关联的行</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">df = DataFrame(&#123;&apos;A&apos;:[1,3,3,4,4],&apos;B&apos;:[&apos;BBC&apos;,&apos;NPR&apos;,&apos;NPR&apos;,&apos;CCTV&apos;,&apos;CCTV&apos;],</div><div class="line">               &apos;C&apos;:[&apos;good&apos;,&apos;bad&apos;,&apos;bad&apos;,&apos;medium&apos;,&apos;great&apos;]&#125;)</div><div class="line">df.drop_duplicates([&apos;C&apos;])</div><div class="line">	A	B	C</div><div class="line">0	1	BBC	good</div><div class="line">1	3	NPR	bad</div><div class="line">3	4	CCTV	medium</div><div class="line">4	4	CCTV	great</div></pre></td></tr></table></figure>
@@ -395,6 +396,10 @@
           
             <a href="/tags/Pandas/" rel="tag"># Pandas</a>
           
+            <a href="/tags/duplicated/" rel="tag"># duplicated()</a>
+          
+            <a href="/tags/drop-duplicates/" rel="tag"># drop_duplicates()</a>
+          
         </div>
       
 
@@ -411,6 +416,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/04/21/Pandas-连接数据集/" rel="prev" title="Pandas 连接数据集">
+                Pandas 连接数据集 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -507,7 +516,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -525,7 +534,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

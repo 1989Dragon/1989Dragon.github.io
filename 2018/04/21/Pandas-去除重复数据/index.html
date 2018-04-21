@@ -84,16 +84,16 @@
 
 
 
-<meta name="description" content="1. 图的类型。主要有3种，线状图，直方图，饼图。1234DataFrame.plot(kind = &amp;apos;line&amp;apos;)DataFrame.plot(kind = &amp;apos;bar&amp;apos;)DataFrame.plot(kind = &amp;apos;barh&amp;apos;)DataFrame.plot(kind = &amp;apos;pie&amp;apos;)">
+<meta name="description" content="1. 找出数据集中的重复数据，使用df.duplicated()1234567891011121314import numpy as npimport pandas as pdfrom pandas import Series, DataFramedf = DataFrame(&amp;#123;&amp;apos;A&amp;apos;:[&amp;apos;Britain&amp;apos;,&amp;apos;USA&amp;apos;,&amp;apo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Pandas 基本绘图">
-<meta property="og:url" content="http://yoursite.com/2018/04/03/Pandas-基本绘图/index.html">
+<meta property="og:title" content="Pandas 去除重复数据">
+<meta property="og:url" content="http://yoursite.com/2018/04/21/Pandas-去除重复数据/index.html">
 <meta property="og:site_name" content="沧海拾珠">
-<meta property="og:description" content="1. 图的类型。主要有3种，线状图，直方图，饼图。1234DataFrame.plot(kind = &amp;apos;line&amp;apos;)DataFrame.plot(kind = &amp;apos;bar&amp;apos;)DataFrame.plot(kind = &amp;apos;barh&amp;apos;)DataFrame.plot(kind = &amp;apos;pie&amp;apos;)">
-<meta property="og:updated_time" content="2018-04-03T13:24:57.906Z">
+<meta property="og:description" content="1. 找出数据集中的重复数据，使用df.duplicated()1234567891011121314import numpy as npimport pandas as pdfrom pandas import Series, DataFramedf = DataFrame(&amp;#123;&amp;apos;A&amp;apos;:[&amp;apos;Britain&amp;apos;,&amp;apos;USA&amp;apos;,&amp;apo">
+<meta property="og:updated_time" content="2018-04-21T01:28:45.471Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Pandas 基本绘图">
-<meta name="twitter:description" content="1. 图的类型。主要有3种，线状图，直方图，饼图。1234DataFrame.plot(kind = &amp;apos;line&amp;apos;)DataFrame.plot(kind = &amp;apos;bar&amp;apos;)DataFrame.plot(kind = &amp;apos;barh&amp;apos;)DataFrame.plot(kind = &amp;apos;pie&amp;apos;)">
+<meta name="twitter:title" content="Pandas 去除重复数据">
+<meta name="twitter:description" content="1. 找出数据集中的重复数据，使用df.duplicated()1234567891011121314import numpy as npimport pandas as pdfrom pandas import Series, DataFramedf = DataFrame(&amp;#123;&amp;apos;A&amp;apos;:[&amp;apos;Britain&amp;apos;,&amp;apos;USA&amp;apos;,&amp;apo">
 
 
 
@@ -121,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/04/03/Pandas-基本绘图/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/21/Pandas-去除重复数据/"/>
 
 
 
 
 
-  <title> Pandas 基本绘图 | 沧海拾珠 </title>
+  <title> Pandas 去除重复数据 | 沧海拾珠 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -260,7 +260,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/03/Pandas-基本绘图/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/21/Pandas-去除重复数据/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="芥龙">
@@ -284,7 +284,7 @@
             
             
               
-                Pandas 基本绘图
+                Pandas 去除重复数据
               
             
           </h1>
@@ -299,8 +299,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-03T20:44:54+08:00">
-                2018-04-03
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-21T09:16:54+08:00">
+                2018-04-21
               </time>
             
 
@@ -340,8 +340,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/04/03/Pandas-基本绘图/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/04/03/Pandas-基本绘图/" itemprop="commentCount"></span>
+                <a href="/2018/04/21/Pandas-去除重复数据/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/04/21/Pandas-去除重复数据/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -367,11 +367,10 @@
       
 
       
-        <h2 id="1-图的类型。主要有3种，线状图，直方图，饼图。"><a href="#1-图的类型。主要有3种，线状图，直方图，饼图。" class="headerlink" title="1. 图的类型。主要有3种，线状图，直方图，饼图。"></a>1. 图的类型。主要有3种，线状图，直方图，饼图。</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">DataFrame.plot(kind = &apos;line&apos;)</div><div class="line">DataFrame.plot(kind = &apos;bar&apos;)</div><div class="line">DataFrame.plot(kind = &apos;barh&apos;)</div><div class="line">DataFrame.plot(kind = &apos;pie&apos;)</div></pre></td></tr></table></figure>
-<a id="more"></a>
-<h2 id="2-图的颜色和尺寸。"><a href="#2-图的颜色和尺寸。" class="headerlink" title="2. 图的颜色和尺寸。"></a>2. 图的颜色和尺寸。</h2><p>可以使用color定义单一颜色，如果想要颜色更加丰富多彩，可以使用colormap。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">DataFrame.plot(color = &apos;red&apos;, figsize = (10,3))</div><div class="line">DataFrame.plot(colormap = &apos;rainbow&apos;, figsize = (10,3))</div></pre></td></tr></table></figure></p>
-<h2 id="3-使用seaborn画图。Seaborn是基于matplotlib的一个可视化工具库，画的图更加的精美。需要单独安装。"><a href="#3-使用seaborn画图。Seaborn是基于matplotlib的一个可视化工具库，画的图更加的精美。需要单独安装。" class="headerlink" title="3. 使用seaborn画图。Seaborn是基于matplotlib的一个可视化工具库，画的图更加的精美。需要单独安装。"></a>3. 使用seaborn画图。Seaborn是基于matplotlib的一个可视化工具库，画的图更加的精美。需要单独安装。</h2><p>$pip install seaborn<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">import seaborn as sns </div><div class="line">df = pd.read_csv(&apos;olympics.csv&apos;,skiprows = 4)</div><div class="line">new_df = df[df.Edition == 1896]</div><div class="line">sns.countplot(x = &apos;Medal&apos;, data = new_df, hue = &apos;Gender&apos;)</div></pre></td></tr></table></figure></p>
-
+        <h2 id="1-找出数据集中的重复数据，使用df-duplicated"><a href="#1-找出数据集中的重复数据，使用df-duplicated" class="headerlink" title="1. 找出数据集中的重复数据，使用df.duplicated()"></a>1. 找出数据集中的重复数据，使用df.duplicated()</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">import numpy as np</div><div class="line">import pandas as pd</div><div class="line">from pandas import Series, DataFrame</div><div class="line">df = DataFrame(&#123;&apos;A&apos;:[&apos;Britain&apos;,&apos;USA&apos;,&apos;USA&apos;,&apos;China&apos;,&apos;China&apos;],</div><div class="line">                &apos;B&apos;:[&apos;BBC&apos;,&apos;NPR&apos;,&apos;NPR&apos;,&apos;CCTV&apos;,&apos;CCTV&apos;],</div><div class="line">               &apos;C&apos;:[&apos;good&apos;,&apos;bad&apos;,&apos;bad&apos;,&apos;great&apos;,&apos;great&apos;]&#125;)</div><div class="line">&lt;!--more--&gt;</div><div class="line">df</div><div class="line">A	B	C</div><div class="line">0	Britain	BBC	good</div><div class="line">1	USA	NPR	bad</div><div class="line">2	USA	NPR	bad</div><div class="line">3	China	CCTV	great</div><div class="line">4	China	CCTV	great</div></pre></td></tr></table></figure>
+<p>找出重复数据，返回boolean值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">df.duplicated()</div><div class="line">0    False</div><div class="line">1    False</div><div class="line">2     True</div><div class="line">3    False</div><div class="line">4     True</div></pre></td></tr></table></figure></p>
+<h2 id="2-去除重复的行"><a href="#2-去除重复的行" class="headerlink" title="2.去除重复的行"></a>2.去除重复的行</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">df.drop_duplicates()</div><div class="line">A	B	C</div><div class="line">0	Britain	BBC	good</div><div class="line">1	USA	NPR	bad</div><div class="line">3	China	CCTV	great</div></pre></td></tr></table></figure>
+<h2 id="3-去除含有重复值的列所关联的行"><a href="#3-去除含有重复值的列所关联的行" class="headerlink" title="3. 去除含有重复值的列所关联的行"></a>3. 去除含有重复值的列所关联的行</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">df = DataFrame(&#123;&apos;A&apos;:[1,3,3,4,4],&apos;B&apos;:[&apos;BBC&apos;,&apos;NPR&apos;,&apos;NPR&apos;,&apos;CCTV&apos;,&apos;CCTV&apos;],</div><div class="line">               &apos;C&apos;:[&apos;good&apos;,&apos;bad&apos;,&apos;bad&apos;,&apos;medium&apos;,&apos;great&apos;]&#125;)</div><div class="line">df.drop_duplicates([&apos;C&apos;])</div><div class="line">	A	B	C</div><div class="line">0	1	BBC	good</div><div class="line">1	3	NPR	bad</div><div class="line">3	4	CCTV	medium</div><div class="line">4	4	CCTV	great</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -403,8 +402,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/01/Pandas-基本数据处理/" rel="next" title="Pandas 基本数据处理">
-                <i class="fa fa-chevron-left"></i> Pandas 基本数据处理
+              <a href="/2018/04/19/Pandas-处理缺失数据/" rel="next" title="Pandas 处理缺失数据">
+                <i class="fa fa-chevron-left"></i> Pandas 处理缺失数据
               </a>
             
           </div>
@@ -412,10 +411,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/05/Pandas-中索引设置及查找/" rel="prev" title="Pandas 中的索引设置及查找">
-                Pandas 中的索引设置及查找 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -464,8 +459,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2018/04/03/Pandas-基本绘图/"
-           data-title="Pandas 基本绘图" data-url="http://yoursite.com/2018/04/03/Pandas-基本绘图/">
+      <div class="ds-thread" data-thread-key="2018/04/21/Pandas-去除重复数据/"
+           data-title="Pandas 去除重复数据" data-url="http://yoursite.com/2018/04/21/Pandas-去除重复数据/">
       </div>
     
   </div>
@@ -585,7 +580,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-图的类型。主要有3种，线状图，直方图，饼图。"><span class="nav-number">1.</span> <span class="nav-text">1. 图的类型。主要有3种，线状图，直方图，饼图。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-图的颜色和尺寸。"><span class="nav-number">2.</span> <span class="nav-text">2. 图的颜色和尺寸。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-使用seaborn画图。Seaborn是基于matplotlib的一个可视化工具库，画的图更加的精美。需要单独安装。"><span class="nav-number">3.</span> <span class="nav-text">3. 使用seaborn画图。Seaborn是基于matplotlib的一个可视化工具库，画的图更加的精美。需要单独安装。</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-找出数据集中的重复数据，使用df-duplicated"><span class="nav-number">1.</span> <span class="nav-text">1. 找出数据集中的重复数据，使用df.duplicated()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-去除重复的行"><span class="nav-number">2.</span> <span class="nav-text">2.去除重复的行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-去除含有重复值的列所关联的行"><span class="nav-number">3.</span> <span class="nav-text">3. 去除含有重复值的列所关联的行</span></a></li></ol></div>
             
 
           </div>

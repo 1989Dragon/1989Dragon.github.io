@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Pandas," />
+  <meta name="keywords" content="Pandas,matplotlib," />
 
 
 
@@ -84,16 +84,16 @@
 
 
 
-<meta name="description" content="1. 图的类型。主要有3种，线状图，直方图，饼图。1234DataFrame.plot(kind = &amp;apos;line&amp;apos;)DataFrame.plot(kind = &amp;apos;bar&amp;apos;)DataFrame.plot(kind = &amp;apos;barh&amp;apos;)DataFrame.plot(kind = &amp;apos;pie&amp;apos;)">
+<meta name="description" content="1. 图的类型。主要有3种，线状图，直方图，饼图。如果是数列数据12345678import matplotlib.pyplot as pltfrom matplotlib import rcParamsrcParams[&amp;apos;figure.figsize&amp;apos;] = 5, 4 #设置图片大小x = range(1,6)y = [2,4,6,8,10]plt.plot(x,y) #li">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Pandas 基本绘图">
 <meta property="og:url" content="http://yoursite.com/2018/04/03/Pandas-基本绘图/index.html">
 <meta property="og:site_name" content="沧海拾珠">
-<meta property="og:description" content="1. 图的类型。主要有3种，线状图，直方图，饼图。1234DataFrame.plot(kind = &amp;apos;line&amp;apos;)DataFrame.plot(kind = &amp;apos;bar&amp;apos;)DataFrame.plot(kind = &amp;apos;barh&amp;apos;)DataFrame.plot(kind = &amp;apos;pie&amp;apos;)">
-<meta property="og:updated_time" content="2018-04-03T13:24:57.906Z">
+<meta property="og:description" content="1. 图的类型。主要有3种，线状图，直方图，饼图。如果是数列数据12345678import matplotlib.pyplot as pltfrom matplotlib import rcParamsrcParams[&amp;apos;figure.figsize&amp;apos;] = 5, 4 #设置图片大小x = range(1,6)y = [2,4,6,8,10]plt.plot(x,y) #li">
+<meta property="og:updated_time" content="2018-04-26T10:25:32.186Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Pandas 基本绘图">
-<meta name="twitter:description" content="1. 图的类型。主要有3种，线状图，直方图，饼图。1234DataFrame.plot(kind = &amp;apos;line&amp;apos;)DataFrame.plot(kind = &amp;apos;bar&amp;apos;)DataFrame.plot(kind = &amp;apos;barh&amp;apos;)DataFrame.plot(kind = &amp;apos;pie&amp;apos;)">
+<meta name="twitter:description" content="1. 图的类型。主要有3种，线状图，直方图，饼图。如果是数列数据12345678import matplotlib.pyplot as pltfrom matplotlib import rcParamsrcParams[&amp;apos;figure.figsize&amp;apos;] = 5, 4 #设置图片大小x = range(1,6)y = [2,4,6,8,10]plt.plot(x,y) #li">
 
 
 
@@ -322,8 +322,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/学习/" itemprop="url" rel="index">
-                    <span itemprop="name">学习</span>
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
                   </a>
                 </span>
 
@@ -367,9 +367,10 @@
       
 
       
-        <h2 id="1-图的类型。主要有3种，线状图，直方图，饼图。"><a href="#1-图的类型。主要有3种，线状图，直方图，饼图。" class="headerlink" title="1. 图的类型。主要有3种，线状图，直方图，饼图。"></a>1. 图的类型。主要有3种，线状图，直方图，饼图。</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">DataFrame.plot(kind = &apos;line&apos;)</div><div class="line">DataFrame.plot(kind = &apos;bar&apos;)</div><div class="line">DataFrame.plot(kind = &apos;barh&apos;)</div><div class="line">DataFrame.plot(kind = &apos;pie&apos;)</div></pre></td></tr></table></figure>
+        <h2 id="1-图的类型。主要有3种，线状图，直方图，饼图。"><a href="#1-图的类型。主要有3种，线状图，直方图，饼图。" class="headerlink" title="1. 图的类型。主要有3种，线状图，直方图，饼图。"></a>1. 图的类型。主要有3种，线状图，直方图，饼图。</h2><p>如果是数列数据<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">import matplotlib.pyplot as plt</div><div class="line">from matplotlib import rcParams</div><div class="line">rcParams[&apos;figure.figsize&apos;] = 5, 4 #设置图片大小</div><div class="line">x = range(1,6)</div><div class="line">y = [2,4,6,8,10]</div><div class="line">plt.plot(x,y) #line chart</div><div class="line">plt.bar(x,y) #bar chart</div><div class="line">plt.bar(y) #pie chart</div></pre></td></tr></table></figure></p>
 <a id="more"></a>
-<h2 id="2-图的颜色和尺寸。"><a href="#2-图的颜色和尺寸。" class="headerlink" title="2. 图的颜色和尺寸。"></a>2. 图的颜色和尺寸。</h2><p>可以使用color定义单一颜色，如果想要颜色更加丰富多彩，可以使用colormap。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">DataFrame.plot(color = &apos;red&apos;, figsize = (10,3))</div><div class="line">DataFrame.plot(colormap = &apos;rainbow&apos;, figsize = (10,3))</div></pre></td></tr></table></figure></p>
+<p>如果是dataframe数据<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">DataFrame.plot(kind = &apos;line&apos;)</div><div class="line">DataFrame.plot(kind = &apos;bar&apos;)</div><div class="line">DataFrame.plot(kind = &apos;barh&apos;)</div><div class="line">DataFrame.plot(kind = &apos;pie&apos;)</div></pre></td></tr></table></figure></p>
+<h2 id="2-图的颜色和尺寸。"><a href="#2-图的颜色和尺寸。" class="headerlink" title="2. 图的颜色和尺寸。"></a>2. 图的颜色和尺寸。</h2><p>可以使用color定义单一颜色，如果想要颜色更加丰富多彩，可以使用colormap。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">DataFrame.plot(color = &apos;red&apos;, figsize = (10,3))</div><div class="line">DataFrame.plot(colormap = &apos;rainbow&apos;, figsize = (10,3))</div><div class="line"></div><div class="line">#rcParams[&apos;figure.figsize&apos;] = 5,4 也可以用来设置图片大小</div></pre></td></tr></table></figure></p>
 <h2 id="3-使用seaborn画图。Seaborn是基于matplotlib的一个可视化工具库，画的图更加的精美。需要单独安装。"><a href="#3-使用seaborn画图。Seaborn是基于matplotlib的一个可视化工具库，画的图更加的精美。需要单独安装。" class="headerlink" title="3. 使用seaborn画图。Seaborn是基于matplotlib的一个可视化工具库，画的图更加的精美。需要单独安装。"></a>3. 使用seaborn画图。Seaborn是基于matplotlib的一个可视化工具库，画的图更加的精美。需要单独安装。</h2><p>$pip install seaborn<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">import seaborn as sns </div><div class="line">df = pd.read_csv(&apos;olympics.csv&apos;,skiprows = 4)</div><div class="line">new_df = df[df.Edition == 1896]</div><div class="line">sns.countplot(x = &apos;Medal&apos;, data = new_df, hue = &apos;Gender&apos;)</div></pre></td></tr></table></figure></p>
 
       
@@ -395,6 +396,8 @@
         <div class="post-tags">
           
             <a href="/tags/Pandas/" rel="tag"># Pandas</a>
+          
+            <a href="/tags/matplotlib/" rel="tag"># matplotlib</a>
           
         </div>
       
@@ -512,7 +515,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -521,7 +524,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>

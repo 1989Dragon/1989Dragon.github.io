@@ -369,7 +369,7 @@
 
       
         
-          <h2 id="1-pyplot-plot-创建一幅图画之后通常需要对该图的坐标名称，字体大小等进行一些简单的设置。"><a href="#1-pyplot-plot-创建一幅图画之后通常需要对该图的坐标名称，字体大小等进行一些简单的设置。" class="headerlink" title="1. pyplot.plot()创建一幅图画之后通常需要对该图的坐标名称，字体大小等进行一些简单的设置。"></a>1. pyplot.plot()创建一幅图画之后通常需要对该图的坐标名称，字体大小等进行一些简单的设置。</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">import matplotlib.pyplot as plt</div><div class="line">#设置线的粗细及颜色</div><div class="line">plt.plot([1,2,3,4], linewidth = 5, c = &apos;red&apos;) </div><div class="line"></div><div class="line">#设置图画大小</div><div class="line">rcParams[&apos;figure.figsize&apos;] = 5,3</div><div class="line"></div><div class="line">#设置图像标题</div><div class="line">plt.title(&apos;My picture&apos;)</div></pre></td></tr></table></figure>
+          <h2 id="1-pyplot-plot-创建一幅图画之后通常需要对该图的坐标名称，字体大小等进行一些简单的设置。"><a href="#1-pyplot-plot-创建一幅图画之后通常需要对该图的坐标名称，字体大小等进行一些简单的设置。" class="headerlink" title="1. pyplot.plot()创建一幅图画之后通常需要对该图的坐标名称，字体大小等进行一些简单的设置。"></a>1. pyplot.plot()创建一幅图画之后通常需要对该图的坐标名称，字体大小等进行一些简单的设置。</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">import matplotlib.pyplot as plt</div><div class="line">from matplotlib import rcParams</div><div class="line"></div><div class="line">#设置线的粗细及颜色</div><div class="line">plt.plot([1,2,3,4], linewidth = 5, c = &apos;red&apos;) </div><div class="line"></div><div class="line">#设置图画大小</div><div class="line">rcParams[&apos;figure.figsize&apos;] = 5,3</div><div class="line"></div><div class="line">#设置图像标题</div><div class="line">plt.title(&apos;My picture&apos;)</div></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/04/28/matplotlib-设置坐标轴常用标签/#more" rel="contents">
@@ -466,6 +466,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -502,8 +524,7 @@
 
       
         
-          <h2 id="1-add-axes-表示在画板上添加一个轴域（个人理解就是在画板上开始画图）。add-axes-x0-y0-width-height-是轴域在画板上的原点坐标值及宽度，高度。"><a href="#1-add-axes-表示在画板上添加一个轴域（个人理解就是在画板上开始画图）。add-axes-x0-y0-width-height-是轴域在画板上的原点坐标值及宽度，高度。" class="headerlink" title="1. add_axes 表示在画板上添加一个轴域（个人理解就是在画板上开始画图）。add_axes([x0, y0, width, height])是轴域在画板上的原点坐标值及宽度，高度。"></a>1. add_axes 表示在画板上添加一个轴域（个人理解就是在画板上开始画图）。add_axes([x0, y0, width, height])是轴域在画板上的原点坐标值及宽度，高度。</h2><p><img src="/uploads/figure.jpg" alt="figure"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">fig = plt.figure() #创建一个画板</div><div class="line"></div><div class="line"># 在画板上添加一个轴域。0,0表示轴域的坐标点，1,1表示轴域的宽和高，这个是与画板的比例值。</div><div class="line"># 这里表面该轴域与画板一样大。</div><div class="line">ax = fig.add_axes([0,0,1,1])</div></pre></td></tr></table></figure>
+          <h2 id="1-add-axes-表示在画板上添加一个轴域（个人理解就是在画板上开始画图）。add-axes-x0-y0-width-height-是轴域在画板上的原点坐标值及宽度，高度。"><a href="#1-add-axes-表示在画板上添加一个轴域（个人理解就是在画板上开始画图）。add-axes-x0-y0-width-height-是轴域在画板上的原点坐标值及宽度，高度。" class="headerlink" title="1. add_axes 表示在画板上添加一个轴域（个人理解就是在画板上开始画图）。add_axes([x0, y0, width, height])是轴域在画板上的原点坐标值及宽度，高度。"></a>1. add_axes 表示在画板上添加一个轴域（个人理解就是在画板上开始画图）。add_axes([x0, y0, width, height])是轴域在画板上的原点坐标值及宽度，高度。</h2><p><img src="/uploads/figure.jpg" alt="figure"><br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/04/26/Pandas中add-axes-add-subplot-和subplots用法解析/#more" rel="contents">
@@ -999,6 +1020,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/学习/" itemprop="url" rel="index">
+                    <span itemprop="name">学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -1265,6 +1308,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/学习/" itemprop="url" rel="index">
+                    <span itemprop="name">学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -1668,7 +1733,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

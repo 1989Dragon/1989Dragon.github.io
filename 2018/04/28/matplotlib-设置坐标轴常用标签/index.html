@@ -84,19 +84,21 @@
 
 
 
-<meta name="description" content="1. pyplot.plot()创建一幅图画之后通常需要对该图的坐标名称，字体大小等进行一些简单的设置。123456789import matplotlib.pyplot as plt#设置线的粗细及颜色plt.plot([1,2,3,4], linewidth = 5, c = &amp;apos;red&amp;apos;) #设置图画大小rcParams[&amp;apos;figure.figsize&amp;apos;">
+<meta name="description" content="1. pyplot.plot()创建一幅图画之后通常需要对该图的坐标名称，字体大小等进行一些简单的设置。1234567891011import matplotlib.pyplot as pltfrom matplotlib import rcParams#设置线的粗细及颜色plt.plot([1,2,3,4], linewidth = 5, c = &amp;apos;red&amp;apos;) #设置图画大小">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Matplotlib 设置坐标轴常用标签">
 <meta property="og:url" content="http://yoursite.com/2018/04/28/matplotlib-设置坐标轴常用标签/index.html">
 <meta property="og:site_name" content="沧海拾珠">
-<meta property="og:description" content="1. pyplot.plot()创建一幅图画之后通常需要对该图的坐标名称，字体大小等进行一些简单的设置。123456789import matplotlib.pyplot as plt#设置线的粗细及颜色plt.plot([1,2,3,4], linewidth = 5, c = &amp;apos;red&amp;apos;) #设置图画大小rcParams[&amp;apos;figure.figsize&amp;apos;">
+<meta property="og:description" content="1. pyplot.plot()创建一幅图画之后通常需要对该图的坐标名称，字体大小等进行一些简单的设置。1234567891011import matplotlib.pyplot as pltfrom matplotlib import rcParams#设置线的粗细及颜色plt.plot([1,2,3,4], linewidth = 5, c = &amp;apos;red&amp;apos;) #设置图画大小">
 <meta property="og:image" content="http://yoursite.com/uploads/xylabel.png">
 <meta property="og:image" content="http://yoursite.com/uploads/axes_xylabel.png">
 <meta property="og:image" content="http://yoursite.com/uploads/axes_xyticks.png">
-<meta property="og:updated_time" content="2018-04-28T13:44:20.641Z">
+<meta property="og:image" content="http://yoursite.com/uploads/20180429_xaxis_label.png">
+<meta property="og:image" content="http://yoursite.com/uploads/20180429_annotate.png">
+<meta property="og:updated_time" content="2018-05-11T23:25:37.633Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Matplotlib 设置坐标轴常用标签">
-<meta name="twitter:description" content="1. pyplot.plot()创建一幅图画之后通常需要对该图的坐标名称，字体大小等进行一些简单的设置。123456789import matplotlib.pyplot as plt#设置线的粗细及颜色plt.plot([1,2,3,4], linewidth = 5, c = &amp;apos;red&amp;apos;) #设置图画大小rcParams[&amp;apos;figure.figsize&amp;apos;">
+<meta name="twitter:description" content="1. pyplot.plot()创建一幅图画之后通常需要对该图的坐标名称，字体大小等进行一些简单的设置。1234567891011import matplotlib.pyplot as pltfrom matplotlib import rcParams#设置线的粗细及颜色plt.plot([1,2,3,4], linewidth = 5, c = &amp;apos;red&amp;apos;) #设置图画大小">
 <meta name="twitter:image" content="http://yoursite.com/uploads/xylabel.png">
 
 
@@ -371,7 +373,7 @@
       
 
       
-        <h2 id="1-pyplot-plot-创建一幅图画之后通常需要对该图的坐标名称，字体大小等进行一些简单的设置。"><a href="#1-pyplot-plot-创建一幅图画之后通常需要对该图的坐标名称，字体大小等进行一些简单的设置。" class="headerlink" title="1. pyplot.plot()创建一幅图画之后通常需要对该图的坐标名称，字体大小等进行一些简单的设置。"></a>1. pyplot.plot()创建一幅图画之后通常需要对该图的坐标名称，字体大小等进行一些简单的设置。</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">import matplotlib.pyplot as plt</div><div class="line">#设置线的粗细及颜色</div><div class="line">plt.plot([1,2,3,4], linewidth = 5, c = &apos;red&apos;) </div><div class="line"></div><div class="line">#设置图画大小</div><div class="line">rcParams[&apos;figure.figsize&apos;] = 5,3</div><div class="line"></div><div class="line">#设置图像标题</div><div class="line">plt.title(&apos;My picture&apos;)</div></pre></td></tr></table></figure>
+        <h2 id="1-pyplot-plot-创建一幅图画之后通常需要对该图的坐标名称，字体大小等进行一些简单的设置。"><a href="#1-pyplot-plot-创建一幅图画之后通常需要对该图的坐标名称，字体大小等进行一些简单的设置。" class="headerlink" title="1. pyplot.plot()创建一幅图画之后通常需要对该图的坐标名称，字体大小等进行一些简单的设置。"></a>1. pyplot.plot()创建一幅图画之后通常需要对该图的坐标名称，字体大小等进行一些简单的设置。</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">import matplotlib.pyplot as plt</div><div class="line">from matplotlib import rcParams</div><div class="line"></div><div class="line">#设置线的粗细及颜色</div><div class="line">plt.plot([1,2,3,4], linewidth = 5, c = &apos;red&apos;) </div><div class="line"></div><div class="line">#设置图画大小</div><div class="line">rcParams[&apos;figure.figsize&apos;] = 5,3</div><div class="line"></div><div class="line">#设置图像标题</div><div class="line">plt.title(&apos;My picture&apos;)</div></pre></td></tr></table></figure>
 <a id="more"></a>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">#给坐标加上标签</div><div class="line">plt.ylabel(&apos;Y axis&apos;, fontsize = 14)</div><div class="line">plt.xlabel(&apos;X axis&apos;, fontsize = 14)</div><div class="line"></div><div class="line">#设置刻度标记的大小</div><div class="line">plt.tick_params(axis = &apos;both&apos;, labelsize = 14)</div><div class="line">plt.show()</div></pre></td></tr></table></figure>
 <p>效果如图：<br><img src="/uploads/xylabel.png" alt="xylabel"></p>
@@ -379,6 +381,11 @@
 <p>效果如图：<br><img src="/uploads/axes_xylabel.png" alt="axes_xylabel"></p>
 <p>设置坐标轴长度及刻度。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">fig = plt.figure()</div><div class="line">ax = fig.add_axes([.1, .1, 1, 1]) </div><div class="line"></div><div class="line">#设置坐标轴长度</div><div class="line">ax.set_xlim([1,10])</div><div class="line">ax.set_ylim([0,5])</div><div class="line"></div><div class="line">#设置刻度</div><div class="line">ax.set_xticks([0,1,2,4,5,6,8,9,10])</div><div class="line">ax.set_yticks([0,1,2,3,4,5])</div><div class="line">ax.plot(x,y)</div></pre></td></tr></table></figure></p>
 <p>效果如图：<br><img src="/uploads/axes_xyticks.png" alt="axes_xyticks"></p>
+<p>DataFrame作图时定义其横坐标刻度。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">cars = pd.read_csv(&apos;mtcars.csv&apos;)</div><div class="line">cars.columns = [&apos;car_names&apos;,&apos;mpg&apos;,&apos;cyl&apos;,&apos;disp&apos;, &apos;hp&apos;, &apos;drat&apos;, &apos;wt&apos;, &apos;qsec&apos;, &apos;vs&apos;, &apos;am&apos;, &apos;gear&apos;, &apos;carb&apos;]</div><div class="line">mpg = cars.mpg</div><div class="line"></div><div class="line">#创建一块画板并在画板上作图</div><div class="line">fig = plt.figure()</div><div class="line">ax = fig.add_axes([.1,.1,1,1])</div><div class="line">mpg.plot()</div><div class="line"></div><div class="line">#定义横坐标刻度范围</div><div class="line">ax.set_xticks(range(32))</div><div class="line"></div><div class="line">#定义横坐标刻度标签及样式</div><div class="line">ax.set_xticklabels(cars.car_names, rotation=60, fontsize=&apos;medium&apos;)</div><div class="line"></div><div class="line">ax.set_title(&apos;Miles per Gallon of Cars in mtcars&apos;)</div><div class="line">ax.set_xlabel(&apos;car names&apos;)</div><div class="line">ax.set_ylabel(&apos;miles/gal&apos;)</div><div class="line"></div><div class="line">#定义图注的位置</div><div class="line">ax.legend(loc= 2)</div></pre></td></tr></table></figure></p>
+<p>效果如图：<br><img src="/uploads/20180429_xaxis_label.png" alt="20180429_xaxis_label"></p>
+<p>有时候需要对图中某些值进行标注，则可以使用annotate()方法。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># xy 表示需要标注的值的x，y坐标，xytext是标注本身的x，y 坐标。</div><div class="line"># arrowprops 是一个包含指示箭头性质的字典，这里定义了箭头颜色及距离标注的距离（比例）。</div><div class="line">ax.annotate(&apos;Toyota Corolla&apos;, xy=(19,33.9), xytext = (21,35),</div><div class="line">           arrowprops=dict(facecolor=&apos;black&apos;, shrink=0.2))</div></pre></td></tr></table></figure>
+<p>效果如图：<br><img src="/uploads/20180429_annotate.png" alt="20180429_annotate"></p>
 
       
     </div>
@@ -534,7 +541,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

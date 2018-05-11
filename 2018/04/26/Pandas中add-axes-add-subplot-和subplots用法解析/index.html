@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="matplotlib," />
 
 
 
@@ -84,24 +84,21 @@
 
 
 
-<meta name="description" content="1. add_axes 表示在画板上添加一个轴域（个人理解就是在画板上开始画图）。add_axes([x0, y0, width, height])是轴域在画板上的原点坐标值及宽度，高度。
-12345fig = plt.figure() #创建一个画板# 在画板上添加一个轴域。0,0表示轴域的坐标点，1,1表示轴域的宽和高，这个是与画板的比例值。# 这里表面该轴域与画板一样大。ax = fig.a">
+<meta name="description" content="1. add_axes 表示在画板上添加一个轴域（个人理解就是在画板上开始画图）。add_axes([x0, y0, width, height])是轴域在画板上的原点坐标值及宽度，高度。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Matplotlib 中add_axes, add_subplot，subplot 和subplots用法解析">
 <meta property="og:url" content="http://yoursite.com/2018/04/26/Pandas中add-axes-add-subplot-和subplots用法解析/index.html">
 <meta property="og:site_name" content="沧海拾珠">
-<meta property="og:description" content="1. add_axes 表示在画板上添加一个轴域（个人理解就是在画板上开始画图）。add_axes([x0, y0, width, height])是轴域在画板上的原点坐标值及宽度，高度。
-12345fig = plt.figure() #创建一个画板# 在画板上添加一个轴域。0,0表示轴域的坐标点，1,1表示轴域的宽和高，这个是与画板的比例值。# 这里表面该轴域与画板一样大。ax = fig.a">
+<meta property="og:description" content="1. add_axes 表示在画板上添加一个轴域（个人理解就是在画板上开始画图）。add_axes([x0, y0, width, height])是轴域在画板上的原点坐标值及宽度，高度。">
 <meta property="og:image" content="http://yoursite.com/uploads/figure.jpg">
 <meta property="og:image" content="http://yoursite.com/uploads/addsubplot.png">
 <meta property="og:image" content="http://yoursite.com/uploads/20180428_subplot.png">
 <meta property="og:image" content="http://yoursite.com/uploads/20180428_add_subplot.png">
 <meta property="og:image" content="http://yoursite.com/uploads/20180428_subplot.png">
-<meta property="og:updated_time" content="2018-04-28T12:10:07.661Z">
+<meta property="og:updated_time" content="2018-04-28T13:49:07.652Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Matplotlib 中add_axes, add_subplot，subplot 和subplots用法解析">
-<meta name="twitter:description" content="1. add_axes 表示在画板上添加一个轴域（个人理解就是在画板上开始画图）。add_axes([x0, y0, width, height])是轴域在画板上的原点坐标值及宽度，高度。
-12345fig = plt.figure() #创建一个画板# 在画板上添加一个轴域。0,0表示轴域的坐标点，1,1表示轴域的宽和高，这个是与画板的比例值。# 这里表面该轴域与画板一样大。ax = fig.a">
+<meta name="twitter:description" content="1. add_axes 表示在画板上添加一个轴域（个人理解就是在画板上开始画图）。add_axes([x0, y0, width, height])是轴域在画板上的原点坐标值及宽度，高度。">
 <meta name="twitter:image" content="http://yoursite.com/uploads/figure.jpg">
 
 
@@ -319,6 +316,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -354,9 +373,7 @@
       
 
       
-        <h2 id="1-add-axes-表示在画板上添加一个轴域（个人理解就是在画板上开始画图）。add-axes-x0-y0-width-height-是轴域在画板上的原点坐标值及宽度，高度。"><a href="#1-add-axes-表示在画板上添加一个轴域（个人理解就是在画板上开始画图）。add-axes-x0-y0-width-height-是轴域在画板上的原点坐标值及宽度，高度。" class="headerlink" title="1. add_axes 表示在画板上添加一个轴域（个人理解就是在画板上开始画图）。add_axes([x0, y0, width, height])是轴域在画板上的原点坐标值及宽度，高度。"></a>1. add_axes 表示在画板上添加一个轴域（个人理解就是在画板上开始画图）。add_axes([x0, y0, width, height])是轴域在画板上的原点坐标值及宽度，高度。</h2><p><img src="/uploads/figure.jpg" alt="figure"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">fig = plt.figure() #创建一个画板</div><div class="line"></div><div class="line"># 在画板上添加一个轴域。0,0表示轴域的坐标点，1,1表示轴域的宽和高，这个是与画板的比例值。</div><div class="line"># 这里表面该轴域与画板一样大。</div><div class="line">ax = fig.add_axes([0,0,1,1])</div></pre></td></tr></table></figure>
-<a id="more"></a>
+        <h2 id="1-add-axes-表示在画板上添加一个轴域（个人理解就是在画板上开始画图）。add-axes-x0-y0-width-height-是轴域在画板上的原点坐标值及宽度，高度。"><a href="#1-add-axes-表示在画板上添加一个轴域（个人理解就是在画板上开始画图）。add-axes-x0-y0-width-height-是轴域在画板上的原点坐标值及宽度，高度。" class="headerlink" title="1. add_axes 表示在画板上添加一个轴域（个人理解就是在画板上开始画图）。add_axes([x0, y0, width, height])是轴域在画板上的原点坐标值及宽度，高度。"></a>1. add_axes 表示在画板上添加一个轴域（个人理解就是在画板上开始画图）。add_axes([x0, y0, width, height])是轴域在画板上的原点坐标值及宽度，高度。</h2><p><img src="/uploads/figure.jpg" alt="figure"><br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">fig = plt.figure() #创建一个画板</div><div class="line"></div><div class="line"># 在画板上添加一个轴域。0,0表示轴域的坐标点，1,1表示轴域的宽和高，这个是与画板的比例值。</div><div class="line"># 这里表面该轴域与画板一样大。</div><div class="line">ax = fig.add_axes([0,0,1,1])</div></pre></td></tr></table></figure></p>
 <h2 id="2-add-subplot-指在画板上添加一个图，不给定坐标值，程序本身会调整大小。相比于add-axes更为灵活，特别是在画多个图时。"><a href="#2-add-subplot-指在画板上添加一个图，不给定坐标值，程序本身会调整大小。相比于add-axes更为灵活，特别是在画多个图时。" class="headerlink" title="2. add_subplot()指在画板上添加一个图，不给定坐标值，程序本身会调整大小。相比于add_axes更为灵活，特别是在画多个图时。"></a>2. add_subplot()指在画板上添加一个图，不给定坐标值，程序本身会调整大小。相比于add_axes更为灵活，特别是在画多个图时。</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">import matplotlib.pyplot as plt</div><div class="line"></div><div class="line">x = range(1,10)</div><div class="line">y = [1,2,3,4,0,4,3,2,1]</div><div class="line">fig = plt.figure()</div><div class="line"></div><div class="line">#参数意思是将画布分割成2行3列，图像在从左到右从上到下的第1块。</div><div class="line">ax = fig.add_subplot(2,3,1) </div><div class="line">ax.pie(x)</div><div class="line"></div><div class="line">#参数意思是将画布分割成2行3列，图像在从左到右从上到下的第3块。</div><div class="line">ax = fig.add_subplot(2,3,3)</div><div class="line">ax.plot(x,y)</div><div class="line">plt.show()</div></pre></td></tr></table></figure>
 <p><img src="/uploads/addsubplot.png" alt="figure"></p>
 <h2 id="3-subplot-画图方法，跟add-subplot类似，但使用subplot会删除之前画板上已有的图。"><a href="#3-subplot-画图方法，跟add-subplot类似，但使用subplot会删除之前画板上已有的图。" class="headerlink" title="3. subplot() 画图方法，跟add_subplot类似，但使用subplot会删除之前画板上已有的图。"></a>3. subplot() 画图方法，跟add_subplot类似，但使用subplot会删除之前画板上已有的图。</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">import matplotlib.pyplot as plt</div><div class="line">plt.plot([1,2,3])</div><div class="line"># 创建一个两行两列的子图，替换掉前面创建的子图及轴域</div><div class="line">plt.subplot(2,1,1)</div><div class="line">plt.plot(range(12))</div><div class="line">plt.subplot(2,1,2, facecolor=&apos;y&apos;)</div></pre></td></tr></table></figure>
@@ -386,6 +403,12 @@
 
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/matplotlib/" rel="tag"># matplotlib</a>
+          
+        </div>
       
 
       
@@ -519,7 +542,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

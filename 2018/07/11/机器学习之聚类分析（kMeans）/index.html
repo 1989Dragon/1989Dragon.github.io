@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="pandas," />
+  <meta name="keywords" content="pandas,sklearn," />
 
 
 
@@ -84,16 +84,19 @@
 
 
 
-<meta name="description" content="1. 连接两个dataframe数据集123import numpy as npimport pandas as pdfrom pandas import Series, DataFrame">
+<meta name="description" content="1. KMeans 算法k-means 算法接受参数 k ;然后将事先输入的n个数据对象划分为 k个聚类以便使得所获得的聚类满足：同一聚类中的对象相似度较高;而不同聚类中的对象相似度较小。聚类相似度是利用各聚类中对象的均值所获得一个“中心对象”(引力中心)来进行计算的。K-means算法的基本思想是：以空间中k个点为中心进行聚类，对最靠近他们的对象归类。通过迭代的方法，逐次更新各聚类中心的值，直至">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Pandas 连接数据集">
-<meta property="og:url" content="http://yoursite.com/2018/04/21/Pandas-连接数据集/index.html">
+<meta property="og:title" content="机器学习之聚类分析（kMeans）">
+<meta property="og:url" content="http://yoursite.com/2018/07/11/机器学习之聚类分析（kMeans）/index.html">
 <meta property="og:site_name" content="沧海拾珠">
-<meta property="og:description" content="1. 连接两个dataframe数据集123import numpy as npimport pandas as pdfrom pandas import Series, DataFrame">
-<meta property="og:updated_time" content="2018-05-12T00:37:36.602Z">
+<meta property="og:description" content="1. KMeans 算法k-means 算法接受参数 k ;然后将事先输入的n个数据对象划分为 k个聚类以便使得所获得的聚类满足：同一聚类中的对象相似度较高;而不同聚类中的对象相似度较小。聚类相似度是利用各聚类中对象的均值所获得一个“中心对象”(引力中心)来进行计算的。K-means算法的基本思想是：以空间中k个点为中心进行聚类，对最靠近他们的对象归类。通过迭代的方法，逐次更新各聚类中心的值，直至">
+<meta property="og:image" content="http://yoursite.com/uploads/20180711_kmeans1.png">
+<meta property="og:image" content="http://yoursite.com/uploads/20180711_kmeans2.png">
+<meta property="og:updated_time" content="2018-07-11T12:33:27.206Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Pandas 连接数据集">
-<meta name="twitter:description" content="1. 连接两个dataframe数据集123import numpy as npimport pandas as pdfrom pandas import Series, DataFrame">
+<meta name="twitter:title" content="机器学习之聚类分析（kMeans）">
+<meta name="twitter:description" content="1. KMeans 算法k-means 算法接受参数 k ;然后将事先输入的n个数据对象划分为 k个聚类以便使得所获得的聚类满足：同一聚类中的对象相似度较高;而不同聚类中的对象相似度较小。聚类相似度是利用各聚类中对象的均值所获得一个“中心对象”(引力中心)来进行计算的。K-means算法的基本思想是：以空间中k个点为中心进行聚类，对最靠近他们的对象归类。通过迭代的方法，逐次更新各聚类中心的值，直至">
+<meta name="twitter:image" content="http://yoursite.com/uploads/20180711_kmeans1.png">
 
 
 
@@ -121,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/04/21/Pandas-连接数据集/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/11/机器学习之聚类分析（kMeans）/"/>
 
 
 
 
 
-  <title> Pandas 连接数据集 | 沧海拾珠 </title>
+  <title> 机器学习之聚类分析（kMeans） | 沧海拾珠 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -260,7 +263,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/21/Pandas-连接数据集/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/11/机器学习之聚类分析（kMeans）/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="芥龙">
@@ -284,7 +287,7 @@
             
             
               
-                Pandas 连接数据集
+                机器学习之聚类分析（kMeans）
               
             
           </h1>
@@ -299,8 +302,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-21T10:53:10+08:00">
-                2018-04-21
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-11T19:58:41+08:00">
+                2018-07-11
               </time>
             
 
@@ -340,8 +343,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/04/21/Pandas-连接数据集/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/04/21/Pandas-连接数据集/" itemprop="commentCount"></span>
+                <a href="/2018/07/11/机器学习之聚类分析（kMeans）/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/07/11/机器学习之聚类分析（kMeans）/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -367,11 +370,16 @@
       
 
       
-        <h2 id="1-连接两个dataframe数据集"><a href="#1-连接两个dataframe数据集" class="headerlink" title="1. 连接两个dataframe数据集"></a>1. 连接两个dataframe数据集</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">import numpy as np</div><div class="line">import pandas as pd</div><div class="line">from pandas import Series, DataFrame</div></pre></td></tr></table></figure>
-<a id="more"></a>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">df_1 = DataFrame(np.arange(16).reshape(4,4))</div><div class="line">	0	1	2	3</div><div class="line">0	0	1	2	3</div><div class="line">1	4	5	6	7</div><div class="line">2	8	9	10	11</div><div class="line">3	12	13	14	15</div><div class="line"></div><div class="line">df_2 = DataFrame(np.arange(4).reshape(2,2))</div><div class="line">	0	1</div><div class="line">0	0	1</div><div class="line">1	2	3</div><div class="line"></div><div class="line"># 将df_1和df_2连接起来</div><div class="line"></div><div class="line">pd.concat([df_1,df_2],axis = 1) #在列上进行连接。pd.concat([df_1,df_2])表示在行上进行连接</div><div class="line">0	1	2	3	0	1</div><div class="line">0	0	1	2	3	0.0	1.0</div><div class="line">1	4	5	6	7	2.0	3.0</div><div class="line">2	8	9	10	11	NaN	NaN</div><div class="line">3	12	13	14	15	NaN	NaN    </div><div class="line"></div><div class="line"># 另外一种连接方法</div><div class="line">df_1.append(df_2,ignore_index = True)</div></pre></td></tr></table></figure>
-<h2 id="2-将dataframe-和series连接起来"><a href="#2-将dataframe-和series连接起来" class="headerlink" title="2.将dataframe 和series连接起来"></a>2.将dataframe 和series连接起来</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">series = Series([3,4,5,6])</div><div class="line">series.name = &apos;added_series&apos;</div><div class="line">pd.concat([df_1,series],axis = 1)</div><div class="line"></div><div class="line">0	1	2	3	added_series</div><div class="line">0	0	1	2	3	3</div><div class="line">1	4	5	6	7	4</div><div class="line">2	8	9	10	11	5</div><div class="line">3	12	13	14	15	6</div></pre></td></tr></table></figure>
-<h2 id="3-去掉指定行或者列"><a href="#3-去掉指定行或者列" class="headerlink" title="3.去掉指定行或者列"></a>3.去掉指定行或者列</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">df_1.drop([0,1])</div><div class="line">0	1	2	3</div><div class="line">2	8	9	10	11</div><div class="line">3	12	13	14	15</div><div class="line"></div><div class="line">df_1.drop([0,1],axis = 1)</div><div class="line">2	3</div><div class="line">0	2	3</div><div class="line">1	6	7</div><div class="line">2	10	11</div><div class="line">3	14	15</div></pre></td></tr></table></figure>
+        <h2 id="1-KMeans-算法"><a href="#1-KMeans-算法" class="headerlink" title="1. KMeans 算法"></a>1. KMeans 算法</h2><p>k-means 算法接受参数 k ;然后将事先输入的n个数据对象划分为 k个聚类以便使得所获得的聚类满足：同一聚类中的对象相似度较高;而不同聚类中的对象相似度较小。聚类相似度是利用各聚类中对象的均值所获得一个“中心对象”(引力中心)来进行计算的。<br>K-means算法的基本思想是：以空间中k个点为中心进行聚类，对最靠近他们的对象归类。通过迭代的方法，逐次更新各聚类中心的值，直至得到最好的聚类结果。<br><a id="more"></a></p>
+<h2 id="2-利用iris数据进行聚类分析"><a href="#2-利用iris数据进行聚类分析" class="headerlink" title="2. 利用iris数据进行聚类分析"></a>2. 利用iris数据进行聚类分析</h2><p>导入相关库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">import numpy as np</div><div class="line">import pandas as pd</div><div class="line">import matplotlib.pyplot as plt</div><div class="line">import sklearn </div><div class="line">from sklearn.cluster import KMeans</div><div class="line">from sklearn.preprocessing import scale</div><div class="line">from sklearn import datasets</div><div class="line">from sklearn.metrics import confusion_matrix,classification_report</div></pre></td></tr></table></figure></p>
+<h2 id="2-导入iris数据集并进行scale。"><a href="#2-导入iris数据集并进行scale。" class="headerlink" title="2. 导入iris数据集并进行scale。"></a>2. 导入iris数据集并进行scale。</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">iris = datasets.load_iris()</div><div class="line">X = scale(iris.data)</div><div class="line">y = pd.DataFrame(iris.target)</div><div class="line"></div><div class="line"># iris.target 是iris数据集中按花的种类标注好的数值列表，由多个0,1,2组成，表示3类。</div></pre></td></tr></table></figure>
+<h2 id="3-利用模型进行聚类分析，设定分为三类。"><a href="#3-利用模型进行聚类分析，设定分为三类。" class="headerlink" title="3. 利用模型进行聚类分析，设定分为三类。"></a>3. 利用模型进行聚类分析，设定分为三类。</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">clustering = KMeans(n_clusters = 3, random_state = 5)</div><div class="line">clustering.fit(X)</div></pre></td></tr></table></figure>
+<h2 id="4-聚类可视化处理。"><a href="#4-聚类可视化处理。" class="headerlink" title="4. 聚类可视化处理。"></a>4. 聚类可视化处理。</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">plt.figure(figsize=(7,4))</div><div class="line">plt.subplot(1,2,1)</div><div class="line"># 实际分类情况</div><div class="line">plt.scatter(x = iris_df.Petal_Length, y = iris_df.Petal_Width, c = np.array([&apos;r&apos;,&apos;g&apos;,&apos;b&apos;])[iris.target])</div><div class="line"></div><div class="line">plt.subplot(1,2,2)</div><div class="line"># 模型预测的分类情况，clustering.labels_是模型预测的分类结果，总共三类，为多个0,1,2组成。</div><div class="line">plt.scatter(x = iris_df.Petal_Length, y = iris_df.Petal_Width, c = np.array([&apos;r&apos;,&apos;g&apos;,&apos;b&apos;])[clustering.labels_])</div></pre></td></tr></table></figure>
+<p>结果如图所示：<br><img src="/uploads/20180711_kmeans1.png" alt="20180711_kmeans1"></p>
+<p>因为颜色不一致，稍作调整。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">relabel = np.choose(clustering.labels_,[2,0,1]).astype(np.int64)</div><div class="line">plt.subplot(1,2,1)</div><div class="line">plt.scatter(x = iris_df.Petal_Length, y = iris_df.Petal_Width, c = np.array([&apos;r&apos;,&apos;g&apos;,&apos;b&apos;])[iris.target])</div><div class="line">plt.subplot(1,2,2)</div><div class="line">plt.scatter(x = iris_df.Petal_Length, y = iris_df.Petal_Width, c = np.array([&apos;r&apos;,&apos;g&apos;,&apos;b&apos;])[relabel])</div></pre></td></tr></table></figure></p>
+<p>结果如图所示：<br><img src="/uploads/20180711_kmeans2.png" alt="20180711_kmeans2"></p>
+<p>最后给出预测准确率。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">print(classification_report(y, relabel))</div><div class="line"></div><div class="line"> precision    recall  f1-score   support</div><div class="line"></div><div class="line">          0       1.00      1.00      1.00        50</div><div class="line">          1       0.74      0.78      0.76        50</div><div class="line">          2       0.77      0.72      0.74        50</div><div class="line"></div><div class="line">avg / total       0.83      0.83      0.83       150</div></pre></td></tr></table></figure></p>
+
       
     </div>
 
@@ -396,6 +404,8 @@
           
             <a href="/tags/pandas/" rel="tag"># pandas</a>
           
+            <a href="/tags/sklearn/" rel="tag"># sklearn</a>
+          
         </div>
       
 
@@ -403,8 +413,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/21/Pandas-去除重复数据/" rel="next" title="Pandas 去除重复数据">
-                <i class="fa fa-chevron-left"></i> Pandas 去除重复数据
+              <a href="/2018/07/08/机器学习之主成分分析（PCA）/" rel="next" title="机器学习之主成分分析（PCA）">
+                <i class="fa fa-chevron-left"></i> 机器学习之主成分分析（PCA）
               </a>
             
           </div>
@@ -412,10 +422,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/26/Pandas中add-axes-add-subplot-和subplots用法解析/" rel="prev" title="Matplotlib 中add_axes, add_subplot，subplot 和subplots用法解析">
-                Matplotlib 中add_axes, add_subplot，subplot 和subplots用法解析 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -464,8 +470,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2018/04/21/Pandas-连接数据集/"
-           data-title="Pandas 连接数据集" data-url="http://yoursite.com/2018/04/21/Pandas-连接数据集/">
+      <div class="ds-thread" data-thread-key="2018/07/11/机器学习之聚类分析（kMeans）/"
+           data-title="机器学习之聚类分析（kMeans）" data-url="http://yoursite.com/2018/07/11/机器学习之聚类分析（kMeans）/">
       </div>
     
   </div>
@@ -585,7 +591,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-连接两个dataframe数据集"><span class="nav-number">1.</span> <span class="nav-text">1. 连接两个dataframe数据集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-将dataframe-和series连接起来"><span class="nav-number">2.</span> <span class="nav-text">2.将dataframe 和series连接起来</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-去掉指定行或者列"><span class="nav-number">3.</span> <span class="nav-text">3.去掉指定行或者列</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-KMeans-算法"><span class="nav-number">1.</span> <span class="nav-text">1. KMeans 算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-利用iris数据进行聚类分析"><span class="nav-number">2.</span> <span class="nav-text">2. 利用iris数据进行聚类分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-导入iris数据集并进行scale。"><span class="nav-number">3.</span> <span class="nav-text">2. 导入iris数据集并进行scale。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-利用模型进行聚类分析，设定分为三类。"><span class="nav-number">4.</span> <span class="nav-text">3. 利用模型进行聚类分析，设定分为三类。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-聚类可视化处理。"><span class="nav-number">5.</span> <span class="nav-text">4. 聚类可视化处理。</span></a></li></ol></div>
             
 
           </div>
